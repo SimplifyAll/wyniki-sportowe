@@ -1,29 +1,30 @@
----
-title: "Dzia³anie ligi NBA"
----
 
-# Liczba zespo³ów
-Liczba zespo³ów wynosi 30. Nie mo¿na z tej ligi awansowaæ ani spaœæ do ni¿szej, dlatego liczba tych zespo³ów jest praktycznie sta³a. Praktycznie, poniewa¿ od wielu lat nikt nie do³¹czy³ lub opuœci³ tej ligi, jedynie czasem zmienia³y siê nazwy zespo³ów lub przenosi³y siê do innego miasta, jednak liczba zostawa³a ta sama.
+
+# Liczba zespoÅ‚Ã³w
+Liczba zespoÅ‚Ã³w wynosi 30. Nie moÅ¼na z tej ligi awansowaÄ‡ ani spaÅ›Ä‡ do niÅ¼szej, dlatego liczba tych zespoÅ‚Ã³w jest praktycznie staÅ‚a. Praktycznie, poniewaÅ¼ od wielu lat nikt nie doÅ‚Ä…czyÅ‚ lub opuÅ›ciÅ‚ tej ligi, jedynie czasem zmieniaÅ‚y siÄ™ nazwy zespoÅ‚Ã³w lub przenosiÅ‚y siÄ™ do innego miasta, jednak liczba zostawaÅ‚a ta sama.
 
 # Struktura 
-Liga dzieli siê na 2 konferencje po 15 dru¿yn: wschodni¹ i zachodni¹
-Ka¿da konferencja dzieli siê na 3 dywizje po 5 dru¿yn. Podzia³ przedstawiam poni¿ej.
+Liga dzieli siÄ™ na 2 konferencje po 15 druÅ¼yn: wschodniÄ… i zachodniÄ…
+KaÅ¼da konferencja dzieli siÄ™ na 3 dywizje po 5 druÅ¼yn. PodziaÅ‚ przedstawiam poniÅ¼ej.
 
+Click [here](https://www.dropbox.com/s/5d70u56rjpuczb6/nba-digital-header.jpg?dl=0)
 
-Równie¿ dla urozmaicenia wizualizacja.
+RÃ³wnieÅ¼ dla urozmaicenia wizualizacja.
+
+Click [here](https://www.dropbox.com/s/d2nt6jiodo6boyr/2004_05_div_map_580.gif?dl=0)
 
 # Sezon zasadniczy
 
-W sezonie zasadniczym ka¿da dru¿yna gra 82 mecze. 41 w domu i 41 na wyjeŸdzie. Dalej sprawa siê komplikuje. Zak³adaj¹c, ¿e jesteœmy dru¿yn¹ w NBA to zagramy:
+W sezonie zasadniczym kaÅ¼da druÅ¼yna gra 82 mecze. 41 w domu i 41 na wyjeÅºdzie. Dalej sprawa siÄ™ komplikuje. ZakÅ‚adajÄ…c, Å¼e jesteÅ›my druÅ¼ynÄ… w NBA to zagramy:
 
-* po 4 mecze z ka¿d¹ dru¿yn¹ w naszej dywizji: 4x4=16
-* po 4 mecze z 6 wybranymi zespo³ami z naszej konferencji, lecz spoza naszej dywizji 6x4=24
-* po 3 mecze z 4 pozosta³ymi zespo³ami z naszej konferencji, lecz spoza naszej dywizji 4x3=12
-* po 2 mecze z dru¿ynami z wszystkimi zespo³ami nie naszej konferencji 15X2=30
+* po 4 mecze z kaÅ¼dÄ… druÅ¼ynÄ… w naszej dywizji: 4x4=16
+* po 4 mecze z 6 wybranymi zespoÅ‚ami z naszej konferencji, lecz spoza naszej dywizji 6x4=24
+* po 3 mecze z 4 pozostaÅ‚ymi zespoÅ‚ami z naszej konferencji, lecz spoza naszej dywizji 4x3=12
+* po 2 mecze z druÅ¼ynami z wszystkimi zespoÅ‚ami nie naszej konferencji 15X2=30
 
-Nachodzi do g³owy pytanie, w jaki sposób wybieramy te 6 dru¿yn (nasza konferencja, lecz spoza naszej dywizji) z którymi gramy 4, a nie 3 mecze. Jest to po prostu rozpisane na kolejne lata. Co roku zmieniamy te dru¿yny, tak by po 5 latach bilans siê zrówna³. Poni¿ej przedstawiam tabelê, w której kolumny reprezentuj¹ 10 zespo³ów z naszej konferencji, lecz spoza naszej dywizji, a wiersze reprezentuj¹ kolejne sezony. Wpisane wartoœci to liczba meczy.
+Nachodzi do gÅ‚owy pytanie, w jaki sposÃ³b wybieramy te 6 druÅ¼yn (nasza konferencja, lecz spoza naszej dywizji) z ktÃ³rymi gramy 4, a nie 3 mecze. Jest to po prostu rozpisane na kolejne lata. Co roku zmieniamy te druÅ¼yny, tak by po 5 latach bilans siÄ™ zrÃ³wnaÅ‚. PoniÅ¼ej przedstawiam tabelÄ™, w ktÃ³rej kolumny reprezentujÄ… 10 zespoÅ‚Ã³w z naszej konferencji, lecz spoza naszej dywizji, a wiersze reprezentujÄ… kolejne sezony. Wpisane wartoÅ›ci to liczba meczy.
 
-Rok/Dru¿yna  |1|2|3|4|5|6|7|8|9|10
+Rok/DruÅ¼yna  |1|2|3|4|5|6|7|8|9|10
 ------------ |---|---|---|---|---|---|---|---|---|---
 1            |4|4|4|4|4|4|3|3|3|3
 2            |3|3|4|4|4|4|4|4|3|3
@@ -33,10 +34,11 @@ Rok/Dru¿yna  |1|2|3|4|5|6|7|8|9|10
 Suma:        |18|18|18|18|18|18|18|18|18|18
 
 # Play-offy
-Po zakoñczeniu sezonu zasadniczego (który s³u¿y w sumie by zakwalifikowaæ siê do play-offów) zaczynaj¹ siê play-offy. Podczas nich 16 dru¿yn z ligi stara siê wygraæ puchar NBA. 
-Do playoffów kwalifikuje siê 8 najlepszych dru¿yn (najlepszy stosunek wygranych do przegranych) z ka¿dej konferencji (8 z zachodniej i 8 z wschodniej).
+Po zakoÅ„czeniu sezonu zasadniczego (ktÃ³ry sÅ‚uÅ¼y w sumie by zakwalifikowaÄ‡ siÄ™ do play-offÃ³w) zaczynajÄ… siÄ™ play-offy. Podczas nich 16 druÅ¼yn z ligi stara siÄ™ wygraÄ‡ puchar NBA. 
+Do playoffÃ³w kwalifikuje siÄ™ 8 najlepszych druÅ¼yn (najlepszy stosunek wygranych do przegranych) z kaÅ¼dej konferencji (8 z zachodniej i 8 z wschodniej).
 
-Aby u³atwiæ zrozumienie systemu nadajmy tym dru¿ynom pewne znaczniki. E lub W zale¿nie od konferencji (E-easten W-western) i od 1 do 8 zale¿nie od miejsca w konferencji po sezonie zasadniczym. Czyli E1 to 1 miejsce w konferencji wschodniej po sezonie zasadniczym. Jeœli 2 zespo³y maj¹ takie same statystyki do akcji wkraczaj¹ dodatkowe przepisy wybieraj¹ce kto dostanie lepsze miejsce.
+Aby uÅ‚atwiÄ‡ zrozumienie systemu nadajmy tym druÅ¼ynom pewne znaczniki. E lub W zaleÅ¼nie od konferencji (E-easten W-western) i od 1 do 8 zaleÅ¼nie od miejsca w konferencji po sezonie zasadniczym. Czyli E1 to 1 miejsce w konferencji wschodniej po sezonie zasadniczym. JeÅ›li 2 zespoÅ‚y majÄ… takie same statystyki do akcji wkraczajÄ… dodatkowe przepisy wybierajÄ…ce kto dostanie lepsze miejsce.
 
-Playoffy s¹ rozgrywane w systemie pucharowym. Zaczynamy od æwieræfina³ów konferencji, potem pó³fina³y konferencji, potem fina³y konferencji i na koñcu fina³ NBA.  Na ka¿dym poziomie gra siê do czterech wygranych. ( czyli maks 7 razy, np. 4-3). Ten kto mia³ lepszy wynik w sezonie zasadniczym zaczyna od 2 meczy u siebie. Potem 2 mecze u przeciwnika, a ca³y schemat wygl¹da 2-2-1-1-1.
-Poni¿ej wizualizacja, która na pewno rozjaœni temat oraz wyt³umaczy jak siê dobiera kto ma graæ z kim.
+Playoffy sÄ… rozgrywane w systemie pucharowym. Zaczynamy od Ä‡wierÄ‡finaÅ‚Ã³w konferencji, potem pÃ³Å‚finaÅ‚y konferencji, potem finaÅ‚y konferencji i na koÅ„cu finaÅ‚ NBA.  Na kaÅ¼dym poziomie gra siÄ™ do czterech wygranych. ( czyli maks 7 razy, np. 4-3). Ten kto miaÅ‚ lepszy wynik w sezonie zasadniczym zaczyna od 2 meczy u siebie. Potem 2 mecze u przeciwnika, a caÅ‚y schemat wyglÄ…da 2-2-1-1-1.
+PoniÅ¼ej wizualizacja, ktÃ³ra na pewno rozjaÅ›ni temat oraz wytÅ‚umaczy jak siÄ™ dobiera kto ma graÄ‡ z kim.
+Click [here](https://www.dropbox.com/s/rnb3uifmaghq90b/di.png?dl=0)
