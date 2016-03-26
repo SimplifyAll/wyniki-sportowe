@@ -7,11 +7,13 @@ Liczba zespołów wynosi 30. Nie można z tej ligi awansować ani spaść do ni�
 Liga dzieli się na 2 konferencje po 15 drużyn: wschodnią i zachodnią
 Każda konferencja dzieli się na 3 dywizje po 5 drużyn. Podział przedstawiam poniżej.
 
-[Podzial ligi](https://www.dropbox.com/s/5d70u56rjpuczb6/nba-digital-header.jpg?dl=0)
+
+<img src="https://www.dropbox.com/s/5d70u56rjpuczb6/nba-digital-header.jpg?dl=1" />
+
 
 Również dla urozmaicenia wizualizacja.
 
-[Mapa pokazujaca podzial ligi](https://www.dropbox.com/s/d2nt6jiodo6boyr/2004_05_div_map_580.gif?dl=0)
+<img src="https://www.dropbox.com/s/d2nt6jiodo6boyr/2004_05_div_map_580.gif?dl=1" />
 
 # Sezon zasadniczy
 
@@ -42,6 +44,5 @@ Aby ułatwić zrozumienie systemu nadajmy tym drużynom pewne znaczniki. E lub W
 Playoffy są rozgrywane w systemie pucharowym. Zaczynamy od ćwierćfinałów konferencji, potem półfinały konferencji, potem finały konferencji i na końcu finał NBA.  Na każdym poziomie gra się do czterech wygranych. ( czyli maks 7 razy, np. 4-3). Ten kto miał lepszy wynik w sezonie zasadniczym zaczyna od 2 meczy u siebie. Potem 2 mecze u przeciwnika, a cały schemat wygląda 2-2-1-1-1.
 Poniżej wizualizacja, która na pewno rozjaśni temat oraz wytłumaczy jak się dobiera kto ma grać z kim.
 
-[Tabela pucharowa](https://www.dropbox.com/s/rnb3uifmaghq90b/di.png?dl=0)
 
 <img src="https://www.dropbox.com/s/rnb3uifmaghq90b/di.png?dl=1" />
