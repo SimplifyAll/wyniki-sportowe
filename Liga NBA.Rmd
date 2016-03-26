@@ -1,0 +1,48 @@
+
+
+# Liczba zespołów
+Liczba zespołów wynosi 30. Nie można z tej ligi awansować ani spaść do niższej, dlatego liczba tych zespołów jest praktycznie stała. Praktycznie, ponieważ od wielu lat nikt nie dołączył lub opuścił tej ligi, jedynie czasem zmieniały się nazwy zespołów lub przenosiły się do innego miasta, jednak liczba zostawała ta sama.
+
+# Struktura 
+Liga dzieli się na 2 konferencje po 15 drużyn: wschodnią i zachodnią
+Każda konferencja dzieli się na 3 dywizje po 5 drużyn. Podział przedstawiam poniżej.
+
+
+<img src="https://www.dropbox.com/s/5d70u56rjpuczb6/nba-digital-header.jpg?dl=1" />
+
+
+Również dla urozmaicenia wizualizacja.
+
+<img src="https://www.dropbox.com/s/d2nt6jiodo6boyr/2004_05_div_map_580.gif?dl=1" />
+
+# Sezon zasadniczy
+
+W sezonie zasadniczym każda drużyna gra 82 mecze. 41 w domu i 41 na wyjeździe. Dalej sprawa się komplikuje. Zakładając, że jesteśmy drużyną w NBA to zagramy:
+
+* po 4 mecze z każdą drużyną w naszej dywizji: 4x4=16
+* po 4 mecze z 6 wybranymi zespołami z naszej konferencji, lecz spoza naszej dywizji 6x4=24
+* po 3 mecze z 4 pozostałymi zespołami z naszej konferencji, lecz spoza naszej dywizji 4x3=12
+* po 2 mecze z drużynami z wszystkimi zespołami nie naszej konferencji 15X2=30
+
+Nachodzi do głowy pytanie, w jaki sposób wybieramy te 6 drużyn (nasza konferencja, lecz spoza naszej dywizji) z którymi gramy 4, a nie 3 mecze. Jest to po prostu rozpisane na kolejne lata. Co roku zmieniamy te drużyny, tak by po 5 latach bilans się zrównał. Poniżej przedstawiam tabelę, w której kolumny reprezentują 10 zespołów z naszej konferencji, lecz spoza naszej dywizji, a wiersze reprezentują kolejne sezony. Wpisane wartości to liczba meczy.
+
+Rok/Drużyna  |1|2|3|4|5|6|7|8|9|10
+------------ |---|---|---|---|---|---|---|---|---|---
+1            |4|4|4|4|4|4|3|3|3|3
+2            |3|3|4|4|4|4|4|4|3|3
+3            |3|3|3|3|4|4|4|4|4|4 
+4            |4|4|3|3|3|3|4|4|4|4
+5            |4|4|4|4|3|3|3|3|4|4
+Suma:        |18|18|18|18|18|18|18|18|18|18
+
+# Play-offy
+Po zakończeniu sezonu zasadniczego (który służy w sumie by zakwalifikować się do play-offów) zaczynają się play-offy. Podczas nich 16 drużyn z ligi stara się wygrać puchar NBA. 
+Do playoffów kwalifikuje się 8 najlepszych drużyn (najlepszy stosunek wygranych do przegranych) z każdej konferencji (8 z zachodniej i 8 z wschodniej).
+
+Aby ułatwić zrozumienie systemu nadajmy tym drużynom pewne znaczniki. E lub W zależnie od konferencji (E-easten W-western) i od 1 do 8 zależnie od miejsca w konferencji po sezonie zasadniczym. Czyli E1 to 1 miejsce w konferencji wschodniej po sezonie zasadniczym. Jeśli 2 zespoły mają takie same statystyki do akcji wkraczają dodatkowe przepisy wybierające kto dostanie lepsze miejsce.
+
+Playoffy są rozgrywane w systemie pucharowym. Zaczynamy od ćwierćfinałów konferencji, potem półfinały konferencji, potem finały konferencji i na końcu finał NBA.  Na każdym poziomie gra się do czterech wygranych. ( czyli maks 7 razy, np. 4-3). Ten kto miał lepszy wynik w sezonie zasadniczym zaczyna od 2 meczy u siebie. Potem 2 mecze u przeciwnika, a cały schemat wygląda 2-2-1-1-1.
+Poniżej wizualizacja, która na pewno rozjaśni temat oraz wytłumaczy jak się dobiera kto ma grać z kim.
+
+
+<img src="https://www.dropbox.com/s/rnb3uifmaghq90b/di.png?dl=1" />
