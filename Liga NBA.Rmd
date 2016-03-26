@@ -1,0 +1,42 @@
+---
+title: "Dzia³anie ligi NBA"
+---
+
+# Liczba zespo³ów
+Liczba zespo³ów wynosi 30. Nie mo¿na z tej ligi awansowaæ ani spaœæ do ni¿szej, dlatego liczba tych zespo³ów jest praktycznie sta³a. Praktycznie, poniewa¿ od wielu lat nikt nie do³¹czy³ lub opuœci³ tej ligi, jedynie czasem zmienia³y siê nazwy zespo³ów lub przenosi³y siê do innego miasta, jednak liczba zostawa³a ta sama.
+
+# Struktura 
+Liga dzieli siê na 2 konferencje po 15 dru¿yn: wschodni¹ i zachodni¹
+Ka¿da konferencja dzieli siê na 3 dywizje po 5 dru¿yn. Podzia³ przedstawiam poni¿ej.
+
+
+Równie¿ dla urozmaicenia wizualizacja.
+
+# Sezon zasadniczy
+
+W sezonie zasadniczym ka¿da dru¿yna gra 82 mecze. 41 w domu i 41 na wyjeŸdzie. Dalej sprawa siê komplikuje. Zak³adaj¹c, ¿e jesteœmy dru¿yn¹ w NBA to zagramy:
+
+* po 4 mecze z ka¿d¹ dru¿yn¹ w naszej dywizji: 4x4=16
+* po 4 mecze z 6 wybranymi zespo³ami z naszej konferencji, lecz spoza naszej dywizji 6x4=24
+* po 3 mecze z 4 pozosta³ymi zespo³ami z naszej konferencji, lecz spoza naszej dywizji 4x3=12
+* po 2 mecze z dru¿ynami z wszystkimi zespo³ami nie naszej konferencji 15X2=30
+
+Nachodzi do g³owy pytanie, w jaki sposób wybieramy te 6 dru¿yn (nasza konferencja, lecz spoza naszej dywizji) z którymi gramy 4, a nie 3 mecze. Jest to po prostu rozpisane na kolejne lata. Co roku zmieniamy te dru¿yny, tak by po 5 latach bilans siê zrówna³. Poni¿ej przedstawiam tabelê, w której kolumny reprezentuj¹ 10 zespo³ów z naszej konferencji, lecz spoza naszej dywizji, a wiersze reprezentuj¹ kolejne sezony. Wpisane wartoœci to liczba meczy.
+
+Rok/Dru¿yna  |1|2|3|4|5|6|7|8|9|10
+------------ |---|---|---|---|---|---|---|---|---|---
+1            |4|4|4|4|4|4|3|3|3|3
+2            |3|3|4|4|4|4|4|4|3|3
+3            |3|3|3|3|4|4|4|4|4|4 
+4            |4|4|3|3|3|3|4|4|4|4
+5            |4|4|4|4|3|3|3|3|4|4
+Suma:        |18|18|18|18|18|18|18|18|18|18
+
+# Play-offy
+Po zakoñczeniu sezonu zasadniczego (który s³u¿y w sumie by zakwalifikowaæ siê do play-offów) zaczynaj¹ siê play-offy. Podczas nich 16 dru¿yn z ligi stara siê wygraæ puchar NBA. 
+Do playoffów kwalifikuje siê 8 najlepszych dru¿yn (najlepszy stosunek wygranych do przegranych) z ka¿dej konferencji (8 z zachodniej i 8 z wschodniej).
+
+Aby u³atwiæ zrozumienie systemu nadajmy tym dru¿ynom pewne znaczniki. E lub W zale¿nie od konferencji (E-easten W-western) i od 1 do 8 zale¿nie od miejsca w konferencji po sezonie zasadniczym. Czyli E1 to 1 miejsce w konferencji wschodniej po sezonie zasadniczym. Jeœli 2 zespo³y maj¹ takie same statystyki do akcji wkraczaj¹ dodatkowe przepisy wybieraj¹ce kto dostanie lepsze miejsce.
+
+Playoffy s¹ rozgrywane w systemie pucharowym. Zaczynamy od æwieræfina³ów konferencji, potem pó³fina³y konferencji, potem fina³y konferencji i na koñcu fina³ NBA.  Na ka¿dym poziomie gra siê do czterech wygranych. ( czyli maks 7 razy, np. 4-3). Ten kto mia³ lepszy wynik w sezonie zasadniczym zaczyna od 2 meczy u siebie. Potem 2 mecze u przeciwnika, a ca³y schemat wygl¹da 2-2-1-1-1.
+Poni¿ej wizualizacja, która na pewno rozjaœni temat oraz wyt³umaczy jak siê dobiera kto ma graæ z kim.
