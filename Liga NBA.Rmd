@@ -43,4 +43,5 @@ Playoffy są rozgrywane w systemie pucharowym. Zaczynamy od ćwierćfinałów ko
 Poniżej wizualizacja, która na pewno rozjaśni temat oraz wytłumaczy jak się dobiera kto ma grać z kim.
 
 [Tabela pucharowa](https://www.dropbox.com/s/rnb3uifmaghq90b/di.png?dl=0)
-<a href="https://www.dropbox.com" rel="some text">![Foo]((https://www.dropbox.com/s/rnb3uifmaghq90b/di.png?dl=0)]</a>
+
+<img src="https://www.dropbox.com/s/rnb3uifmaghq90b/di.png?dl=1" />
