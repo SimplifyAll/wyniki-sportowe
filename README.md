@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/SimplifyAll/wyniki-sportowe.png?label=ready&title=Ready)](https://waffle.io/SimplifyAll/wyniki-sportowe)
 # Projekt "Przewidywanie wyników sportowych"
 
 Projekt poświęcony predykcji wyników sportowych w lidze koszykarskiej NBA.
