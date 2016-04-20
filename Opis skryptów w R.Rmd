@@ -1,0 +1,23 @@
+# Opis skryptów 
+
+##baza_nazw
+
+Skrypt zwraca data.frame, który zawiera nastêpuj¹ce kolumny:
+
+* nazwa - aktualna nazwa dru¿yny
+* skrot - aktualny skrót nazwy dru¿yny
+* rok.zmian - rok od którego zaczê³a obowi¹zywaæ aktualna nazwa, jeœli NA to znaczy, ze od dawna
+* poprzed.nazwa - poprzednia nazwa dru¿yny, NA jeœli w rok.zmian NA
+* poprzed.skrot - skrót poprzedniej nazwy dru¿yny, NA jeœli w rok.zmian NA
+
+## statystyki lata 2012 2016
+
+Skrypt zwraca data.frame, który zawiera nastêpuj¹ce kolumny:
+
+* Team - nazwa dru¿yny
+* G - liczba rozegranych meczy
+* FG - liczba trafionych koszy
+* FGA - liczba oddanych rzutów
+* FG% - procent oddanych rzutów
+cdn...
+
