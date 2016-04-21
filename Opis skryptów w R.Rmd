@@ -1,23 +1,68 @@
-# Opis skrypt�w 
+# Opis skryptów 
 
 ##baza_nazw
 
-Skrypt zwraca data.frame, kt�ry zawiera nast�puj�ce kolumny:
+Skrypt zwraca data.frame, który zawiera następujące kolumny:
 
-* nazwa - aktualna nazwa dru�yny
-* skrot - aktualny skr�t nazwy dru�yny
-* rok.zmian - rok od kt�rego zacz�a obowi�zywa� aktualna nazwa, je�li NA to znaczy, ze od dawna
-* poprzed.nazwa - poprzednia nazwa dru�yny, NA je�li w rok.zmian NA
-* poprzed.skrot - skr�t poprzedniej nazwy dru�yny, NA je�li w rok.zmian NA
+* nazwa - aktualna nazwa drużyny
+* skrot - aktualny skrót nazwy drużyny
+* rok.zmian - rok od którego zaczęła obowiązywać aktualna nazwa, jeśli NA to znaczy, ze od dawna
+* poprzed.nazwa - poprzednia nazwa drużyny, NA jeśli w rok.zmian NA
+* poprzed.skrot - skrót poprzedniej nazwy drużyny, NA jeśli w rok.zmian NA
 
 ## statystyki lata 2012 2016
 
-Skrypt zwraca data.frame, kt�ry zawiera nast�puj�ce kolumny:
+Skrypt zwraca data.frame, który zawiera następujące kolumny:
 
-* Team - nazwa dru�yny
+* Team - nazwa drużyny
 * G - liczba rozegranych meczy
+* MP - liczba rozegranych minut
 * FG - liczba trafionych koszy
-* FGA - liczba oddanych rzut�w
-* FG% - procent oddanych rzut�w
-cdn...
+* FGA - liczba oddanych rzutów
+* FG% - procent trafionych rzutów
+* 3P - liczba trafionych rzutów za 3
+* 3PA - liczba oddanych rzutów za 3
+* 3P% - procent trafionych rzutów za 3
+* 2P - liczba trafionych rzutów za 2
+* 2PA - liczba oddanych rzutów za 2
+* 2P% - procent trafionych rzutów za 2
+* FT - liczba trafionych rzutów osobistych
+* FTA - liczba oddanych rzutów osobistych
+* FT% - procent trafionych rzutów osobistych
+* ORB - zbiórki w ataku
+* DRB - zbiórki w obronie 
+* TRB - zbiórki ogółem
+* AST - asysty
+* STL - przechwyty
+* BLK - bloki
+* TOV - straty
+* PF - faule osobiste
+* PTS - punkty ogółem
+* PTS/G - średnia punktów na mecz
+
+Teraz przechodzimy do kolumn dla statystyk związanych z drużynami przeciwnymi, z którymi grała drużyna podana w kolumnie Team. Będą one analogiczne do poprzednich (od FG do PTS/G). Aby odróżnić kolumny przez nazwą dodajemy "O", czyli liczba trafionych koszy przez przeciwników to "OFG". Kontynuujemy:
+
+* Age- średni wiek zawodników
+* PW - przewidywana liczba zwycięstw
+* PL - przewidywana liczba porażek
+* MOV - zmienna, określająca średnio jak duże było nasze zwycięstwo/przegrana (czy 40pkt czy 2)
+* SOS - układ grafiku meczy, jeśli 0 to przeciętny, jeśli plus to korzystny, jeśli minus to niesprzyjający 
+* SRS - zmienna, która jest kombinacją dwóch poprzednich
+* ORtg - przewidywana liczba punktów, która będzie zdobyta na 100 akcji ofensywnych 
+* DRtg - przewidywana liczba punktów, którą pozwolą zdobyć przeciwnikom na 100 akcji defensywnych
+* FTr - stosunek liczby rzutów osobistych do liczby rzutów
+* 3PAr - stosunek liczby rzutów za 3 do liczby rzutów
+* TS% - efektywność rzutów 
+* eFG% - zmienna uwzględniająca fakt że rzut za 3 ma większe ryzyko, ale większy zysk
+* TOV% - przewidywana liczba strat na 100 akcji ofensywnych
+* ORB% - przewidywany procent akcji zakończonych nietrafionym rzutem, w którym uda nam się zebrać w ofensywie piłkę
+* FT/FGA - 
+* eFG%.1 - to samo co eFG%, tylko dla drużyn przeciwnych
+* TOV%.1 - to samo co TOV%, tylko dla drużyn przeciwnych
+* DRB% - przewidywany procent akcji zakończonych nietrafionym rzutem przeciwników, w którym uda nam się zebrać piłkę w defensywie
+* FT/FGA.1 - 
+* Arena - nazwa stadionu
+* Attendance - suma liczby kibiców z każdego meczu
+
+
 
