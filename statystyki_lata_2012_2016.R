@@ -49,8 +49,9 @@ for ( i in 2:6)
 team  <- team[order(team$Team,team$rok),]
 op <- op[order(op$Team,op$rok),]
 mi <- mi[order(mi$Team,mi$rok),]
-all <- cbind(team[1:25],op[2:25],mi[2:24])
+all <- cbind(team[1:25],op[4:25],mi[2:24])
 all$Team[all$Team=="Charlotte Hornets"] <- "Charlotte Bobcats"
 all$Team[all$Team=="New Jersey Nets"] <- "Brooklyn Nets"
 all$Team[all$Team=="New Orleans Pelicans"] <- "New Orleans Hornets"
 all <- all[order(all$Team,all$rok),]
+colnames(all)[26:47] <- paste0("O",names(all[26:47]))
