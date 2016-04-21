@@ -21,7 +21,7 @@ druzyny$nazwa <- c( "Atlanta Hawks" , "Boston Celtics" , "Brooklyn Nets" , "Char
                     "Orlando Magic" , "Philadelphia 76ers" , "Phoenix Suns" , "Portland Trail Blazers" ,
                     "Sacramento Kings" , "San Antonio Spurs" , "Toronto Raptors" , "Utah Jazz" , "Washington Wizards" )
 
-druzyny$skrot <- c( "ATL" , "BOS" , "BRK" , "CHA" , "CHI" , "CLE" , "DAL" , "DEN" , "DET" , "GSW" , "HOU" , "IND", "LAC" ,
+druzyny$skrot <- c( "ATL" , "BOS" , "BRK" , "CHO" , "CHI" , "CLE" , "DAL" , "DEN" , "DET" , "GSW" , "HOU" , "IND", "LAC" ,
                     "LAL" , "MEM" , "MIA" , "MIL" , "MIN" , "NOP" , "NYK" , "OKC" , "ORL" , "PHI" , "PHO" , "POR" , "SAC" ,
                     "SAS" , "TOR" , "UTA" , "WAS" )
 
@@ -32,8 +32,8 @@ druzyny$poprzed.skrot <- c( NA , NA , "NJN" , "CHA" , NA , NA , NA , NA , NA , N
                          "NOH" , NA , "SEA" , NA , NA , NA , NA , NA , NA , NA , NA , NA )
 
 druzyny$poprzed.nazwa <- c( NA , NA , "New Jersey Nets" , "Charlotte Bobcats" , NA , NA , NA , NA , NA , NA , NA ,NA, NA ,
-                            NA , NA , NA , NA , NA , "NOH", NA , "Seattle SuperSonics" , NA , NA , NA , NA , NA , NA , NA ,
-                            NA , NA )
+                            NA , NA , NA , NA , NA , "New Orleans Hornets", NA , "Seattle SuperSonics" , NA , NA , NA , NA ,
+                            NA , NA , NA , NA , NA )
 
 ###############################################################################################################################
 
