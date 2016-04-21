@@ -57,8 +57,8 @@ WITH (
 dbSendQuery(conn=con, statement = sql_command)
 
 sql_command <- "CREATE TABLE team_season_statistics (
-  team_id                       integer NOT NULL,
-  season                        varchar(4) NOT NULL,
+  team_id                       varchar(4) NOT NULL,
+  season                        integer NOT NULL,
   wins_num                      integer,
   losses_num                    integer,
   season_finish_position        integer,
