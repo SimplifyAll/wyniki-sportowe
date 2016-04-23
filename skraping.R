@@ -22,7 +22,7 @@ druzyny$skrot <- c("ATL","BOS","BRK","CHO","CHI","CLE","DAL","DEN","DET","GSW","
 
 
 ##Pobieranie historii 5 lat
-#pobieramy dane z historii dla 2012-2016
+#pobieramy dane z historii dla 2011-2015
 team <- data.frame(matrix(numeric(0),ncol=27))
 op <- data.frame(matrix(numeric(0),ncol=27))
 mi <- data.frame(matrix(numeric(0),ncol=27))
@@ -34,6 +34,7 @@ for ( i in 1:5)
   tabele <- readHTMLTable(URL,h=T)
   
   team_stats <- tabele$team
+  #gsub usuwa * ze slow
   team_stats$Team <- gsub('\\*', '',team_stats$Team)
   team_stats <- cbind(team_stats,year)
   nazwy <- names(team_stats)
