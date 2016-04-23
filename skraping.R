@@ -26,30 +26,30 @@ druzyny$skrot <- c("ATL","BOS","BRK","CHO","CHI","CLE","DAL","DEN","DET","GSW","
 team <- data.frame(matrix(numeric(0),ncol=27))
 op <- data.frame(matrix(numeric(0),ncol=27))
 mi <- data.frame(matrix(numeric(0),ncol=27))
-for ( i in 2:6)
+for ( i in 1:5)
 {
-  rok <- paste0("201",i)
-  html <- paste0("http://www.basketball-reference.com/leagues/NBA_",rok,".html")
+  year <- paste0("201",i)
+  html <- paste0("http://www.basketball-reference.com/leagues/NBA_",year,".html")
   URL<-getURL(html)
   tabele <- readHTMLTable(URL,h=T)
   
   team_stats <- tabele$team
   team_stats$Team <- gsub('\\*', '',team_stats$Team)
-  team_stats <- cbind(team_stats,rok)
+  team_stats <- cbind(team_stats,year)
   nazwy <- names(team_stats)
   names(team) <- nazwy
   team <- rbind(team,team_stats)
  
   opponent <- tabele$opponent
   opponent$Team <- gsub('\\*', '',opponent$Team)
-  opponent <- cbind(opponent,rok)
+  opponent <- cbind(opponent,year)
   nazwy <- names(opponent)
   names(op) <- nazwy
   op <- rbind(op,opponent)
   
   mis <- tabele$misc
   mis$Team <- gsub('\\*', '',mis$Team)
-  mis <- cbind(mis,rok)
+  mis <- cbind(mis,year)
   nazwy <- names(mis)
   names(mi) <- nazwy
   mi<- rbind(mi,mis)
@@ -58,13 +58,14 @@ for ( i in 2:6)
 
 #pobieranie danych dla kazdej druzyny 
 
+#tworzenie liste, skladajaca sie z ramek danych
 ramki <- lapply(druzyny$nazwa,function (x) x=data.frame())
 names(ramki) <- druzyny$nazwa
 
-for ( i in 2:6)
+for ( i in 1:5)
 {
   
-  rok <- paste0("201",i)
+  year <- paste0("201",i)
   for(j in 1:length(druzyny$skrot))
   {
     druzyna <- druzyny$skrot[j]
@@ -81,7 +82,7 @@ for ( i in 2:6)
       druzyna <-"NOH"
     }
     
-    html <- paste0( "http://www.basketball-reference.com/teams/",druzyna,"/",rok,"_games.html")
+    html <- paste0( "http://www.basketball-reference.com/teams/",druzyna,"/",year,"_games.html")
     URL <- getURL(html)
     ramka <- readHTMLTable(URL,h=T)
     ramka <- ramka$teams_games
@@ -90,15 +91,22 @@ for ( i in 2:6)
               "Tm","Opp","W","L","Streak" ,"Notes" ) 
     names(ramka) <- name
     ramka <- data.frame(Opponent=ramka$Opponent,Date=ramka$Date,Tm=ramka$Tm,Opp=ramka$Opp,
-                 L=ramka$L,Result=ramka$Result,Where=ramka$Where,Year=rok)
+                 L=ramka$L,Result=ramka$Result,Where=ramka$Where,Year=year)
     ramka <- ramka[-c(21,42,63,84),]
     ramki[[j]]=rbind(ramki[[j]],ramka)
   }
 }
 
+
+#laczenie wszystkich ramek do jednej
+#jak spojrzymy na ramki, to widzimy, ze kazdy element listy ma nazwe o nazwie druzyny, dla ktorej 
+#podane historie meczow, wiec pomysl polega na tym, zeby polaczyc do jednej ramki wszystkie ramki, 
+#dodajac kolumne  HOST,ktora oznacza, ze grala u danej druzyny na boisku (indykator "",jak na wyjedzie- @), rowniez 
+#jak mamy zamiana druzyn, to musimy  wyniki pozamieniac miejscami, i Result: W->L lub naodwrot
 new <- data.frame()
 for(i in 1:(length(ramki)-1))
 { 
+  
   Host <- names(ramki[i])
   nowa <- data.frame(cbind(Host,as.data.frame(ramki[[i]])))
   
