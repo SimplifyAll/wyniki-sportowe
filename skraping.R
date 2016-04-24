@@ -70,15 +70,15 @@ for ( i in 1:5)
   for(j in 1:length(druzyny$skrot))
   {
     druzyna <- druzyny$skrot[j]
-    if(i==2 & j==3)
+    if((i==1 | i==2) & j==3)
     {
       druzyna <- "NJN"
     }
-    if((i==4 | i==3 | i==2) & j==4)
+    if((i==4 | i==3 | i==2 | i==1) & j==4)
     {
       druzyna <- "CHA"
     }
-    if((i==2 | i==3) & j==19)
+    if((i==2 | i==3 | i==1) & j==19)
     {
       druzyna <-"NOH"
     }
@@ -146,7 +146,7 @@ Opponenttt=unlist(sapply(new$Opponent, function(x) druzyny[druzyny$nazwa==x,2]))
 names(Opponenttt)=NULL
 new$Opponent=as.vector(Opponenttt)
 
-new
+new=new[order(new$Year),]
 
 ##TESTy
 
