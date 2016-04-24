@@ -2,7 +2,7 @@
 
 Skrypt skraping.R służy do ściągnięcia potrzebnych nam danych i umieszczeniu ich w 3 data.framach, których opis umieszczam poniżej.
 
-## Data.frame druzyny
+## Data.frame team.names
 
 Data.frame, który zawiera następujące kolumny:
 
@@ -84,6 +84,33 @@ Data.frame, który zawiera następujące kolumny:
 * FT/FGA.1 - 
 * Arena - nazwa stadionu
 * Attendance - suma liczby kibiców z każdego meczu
+
+## Data.frame games.history
+
+Data.frame, który zawiera następujące kolumny:
+* Host - Skrót nazwy drużyny gospodarzy
+* Opponent - Skrót nazwy drużyny gości
+* Date - Data meczu
+* Tm - Liczba punktów zdobytych przez gospodarzy
+* Opp - Liczba punktów zdobytych przez gości
+* Result - Rezultat meczu (W to wygrana gospodarzy , L to wygrana gości)
+* Year - Sezon rozegrania meczu
+
+## Lista team.story
+
+Jest to lista zawierająca 30 data.framów o nazwach drużyn. Każdy z nich odpowiada 5 letniej historii meczów dla zespołu.
+
+W każdym data.framie znajdują sie kolumny:
+* Opponent- Nazwa drużyny przeciwnej
+* Date - Data meczu
+* Tm - Liczba zdobytych punktów przez daną drużynę
+* Opp - Liczba zdobytych punktów przez drużynę przeciwną 
+* L - Ile włącznie z tym meczem dana drużyna odniosła porażek w danym sezonie
+* Result - Wynik meczu
+* Where - Jeśli @ to na wyjeździe, jeśli pusto to w domu
+* Year - Rok
+
+
 
 
 
