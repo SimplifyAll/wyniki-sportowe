@@ -1,8 +1,10 @@
 # Opis skryptów 
 
-##baza_nazw
+Skrypt skraping.R służy do ściągnięcia potrzebnych nam danych i umieszczeniu ich w 3 data.framach, których opis umieszczam poniżej.
 
-Skrypt zwraca data.frame, który zawiera następujące kolumny:
+## Data.frame team.names
+
+Data.frame, który zawiera następujące kolumny:
 
 * nazwa - aktualna nazwa drużyny
 * skrot - aktualny skrót nazwy drużyny
@@ -10,9 +12,9 @@ Skrypt zwraca data.frame, który zawiera następujące kolumny:
 * poprzed.nazwa - poprzednia nazwa drużyny, NA jeśli w rok.zmian NA
 * poprzed.skrot - skrót poprzedniej nazwy drużyny, NA jeśli w rok.zmian NA
 
-## statystyki lata 2012 2016
+## Data.frame stats
 
-Skrypt zwraca data.frame, który zawiera następujące kolumny:
+Data.frame, który zawiera następujące kolumny:
 
 * Team - nazwa drużyny
 * G - liczba rozegranych meczy
@@ -39,9 +41,28 @@ Skrypt zwraca data.frame, który zawiera następujące kolumny:
 * PF - faule osobiste
 * PTS - punkty ogółem
 * PTS/G - średnia punktów na mecz
-
-Teraz przechodzimy do kolumn dla statystyk związanych z drużynami przeciwnymi, z którymi grała drużyna podana w kolumnie Team. Będą one analogiczne do poprzednich (od FG do PTS/G). Aby odróżnić kolumny przez nazwą dodajemy "O", czyli liczba trafionych koszy przez przeciwników to "OFG". Kontynuujemy:
-
+* OFG - liczba trafionych koszy drużyn przeciwnych
+* OFGA - liczba oddanych rzutów drużyn przeciwnych
+* OFG% - procent trafionych rzutów drużyn przeciwnych
+* O3P - liczba trafionych rzutów za 3 drużyn przeciwnych
+* O3PA - liczba oddanych rzutów za 3 drużyn przeciwnych
+* O3P% - procent trafionych rzutów za 3 drużyn przeciwnych
+* O2P - liczba trafionych rzutów za 2 drużyn przeciwnych
+* O2PA - liczba oddanych rzutów za 2 drużyn przeciwnych
+* O2P% - procent trafionych rzutów za 2 drużyn przeciwnych
+* OFT - liczba trafionych rzutów osobistych drużyn przeciwnych
+* OFTA - liczba oddanych rzutów osobistych drużyn przeciwnych
+* OFT% - procent trafionych rzutów osobistych drużyn przeciwnych
+* OORB - zbiórki w ataku drużyn przeciwnych
+* ODRB - zbiórki w obronie drużyn przeciwnych 
+* OTRB - zbiórki ogółem drużyn przeciwnych
+* OAST - asysty drużyn przeciwnych
+* OSTL - przechwyty drużyn przeciwnych
+* OBLK - bloki drużyn przeciwnych
+* OTOV - straty drużyn przeciwnych
+* OPF - faule osobiste drużyn przeciwnych
+* OPTS - punkty ogółem drużyn przeciwnych
+* OPTS/G - średnia punktów na mecz drużyn przeciwnych
 * Age- średni wiek zawodników
 * PW - przewidywana liczba zwycięstw
 * PL - przewidywana liczba porażek
@@ -63,6 +84,33 @@ Teraz przechodzimy do kolumn dla statystyk związanych z drużynami przeciwnymi,
 * FT/FGA.1 - 
 * Arena - nazwa stadionu
 * Attendance - suma liczby kibiców z każdego meczu
+
+## Data.frame games.history
+
+Data.frame, który zawiera następujące kolumny:
+* Host - Skrót nazwy drużyny gospodarzy
+* Opponent - Skrót nazwy drużyny gości
+* Date - Data meczu
+* Tm - Liczba punktów zdobytych przez gospodarzy
+* Opp - Liczba punktów zdobytych przez gości
+* Result - Rezultat meczu (W to wygrana gospodarzy , L to wygrana gości)
+* Year - Sezon rozegrania meczu
+
+## Lista team.story
+
+Jest to lista zawierająca 30 data.framów o nazwach drużyn. Każdy z nich odpowiada 5 letniej historii meczów dla zespołu.
+
+W każdym data.framie znajdują sie kolumny:
+* Opponent- Nazwa drużyny przeciwnej
+* Date - Data meczu
+* Tm - Liczba zdobytych punktów przez daną drużynę
+* Opp - Liczba zdobytych punktów przez drużynę przeciwną 
+* L - Ile włącznie z tym meczem dana drużyna odniosła porażek w danym sezonie
+* Result - Wynik meczu
+* Where - Jeśli @ to na wyjeździe, jeśli pusto to w domu
+* Year - Rok
+
+
 
 
 
