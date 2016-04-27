@@ -9,20 +9,15 @@
 library(RPostgreSQL) #do not user require(), require = try, library = do or fail
 
 pw <- {
-  "haslo"
+  "dataScience"
 }
 
 driver <- dbDriver("PostgreSQL")
 
-con <- dbConnect(driver, dbname="datascience", 
+con <- dbConnect(driver, dbname="basketball", 
                  host= "localhost", port=5432,
-                 user="postgres", password=pw )
+                 user="kndatascience", password=pw )
 rm(pw)#remove password
-
-#simple test to see if connected
-if(!dbExistsTable(con, "test")){
-  stop()
-}
 
 #CREATE DB
 
