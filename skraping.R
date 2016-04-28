@@ -47,7 +47,7 @@ opponent.stats <- data.frame(matrix(numeric(0),ncol=26))
 miscellaneous.stats <- data.frame(matrix(numeric(0),ncol=26))
 
 
-for ( i in 2:6)    # Pętla ta ściąga w kolejnych iteracjach, ściąga dane z kolejnych lat. Od 2012 do 2016.
+for ( i in 1:5)    # Pętla ta ściąga w kolejnych iteracjach, ściąga dane z kolejnych lat. Od 2012 do 2016.
 {
     # Ściągnięcie tabel z jednego sezonu i przypisanie je do zmiennej tabele
     Year=paste0("201",i) 
@@ -104,6 +104,9 @@ stats <- stats[order(stats$Team,stats$Year),]
 
 # Dane z Opponent Stats mają takie same nazwy jak z Team Stats, dlatego odróżnimy je poprzez dodanie O z przodu
 colnames(stats)[26:47] <- paste0("O",names(stats[26:47]))
+
+# Zamiana nazw na skróty
+stats$Team<-sapply(stats$Team, function(x) team.names[team.names$nazwa==x,2])
 
 # Data.frame stats jest już gotowy
 
