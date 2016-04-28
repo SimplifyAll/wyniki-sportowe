@@ -201,6 +201,9 @@ games.story$Opponent=as.vector(Opponent.tmp)
 
 # Sortowanie
 games.story=games.story[order(new$Year), -6]
+# Usunięcie replikowanych danych
+
+games.story <- games.story[!duplicated(games.story), ]
 
 # Testy 
 # new[new$Year=="2014" & (new$Opponent=="Utah Jazz" | new$Host=="Utah Jazz") &
