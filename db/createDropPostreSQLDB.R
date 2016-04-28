@@ -1,6 +1,6 @@
 #install package if not yet present, make sure to have libpq-dev
 #https://code.google.com/archive/p/rpostgresql/ link to te rpostgresql package
-#install.packages("RPostgreSQL")
+install.packages("RPostgreSQL")
 
 #Skrypt tworzy bazę
 #TODO: zenkapsulować do trzech funkcji: connect(), disconnect(), create(), delete()
@@ -93,12 +93,12 @@ op_pergame_free_throw_p           real,
 op_pergame_offensive_rebounds    real,
 op_pergame_defensive_rebounds    real,
 op_total_defensive_rebounds      real,
-op_ pergame_assists               real,
-op_ pergame_steals                real,
+op_pergame_assists               real,
+op_pergame_steals                real,
 op_pergame_blocks                real,
 op_pergame_turnovers             real,
 op_pergame_personal_fauls        real,
-op_ points_general                real,
+op_points_general                real,
 op_pergame_points                real,
 age                              real,
 pred_win                          real,
@@ -110,7 +110,7 @@ off_rate                          real,
 deff_rate                         real,
 pace_f                            real,
 free_throw_rate                   real,
-3p_rate                           real,
+g3p_rate                           real,
 true_shoot                        real,
 eff_goals                         real,
 turnover_p                        real,
@@ -122,7 +122,7 @@ def_reb_p                         real,
 opp_perfield_goal_attempt         real,
 arena                             varchar(50),
 attendance                        real,
-season                        varchar(8) NOT NULL,
+season                        varchar(4) NOT NULL,
 CONSTRAINT team_season_stats_pk PRIMARY KEY (team_id, season)
 )
 WITH (
