@@ -1,6 +1,6 @@
 #install package if not yet present, make sure to have libpq-dev
 #https://code.google.com/archive/p/rpostgresql/ link to te rpostgresql package
-install.packages("RPostgreSQL")
+#install.packages("RPostgreSQL")
 
 #Skrypt tworzy bazę
 #TODO: zenkapsulować do trzech funkcji: connect(), disconnect(), create(), delete()
