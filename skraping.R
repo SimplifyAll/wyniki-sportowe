@@ -193,7 +193,7 @@ for(i in 1:(length(team.story)-1))
     games.story.tmp$Opponent <- Opponent.tmp
     games.story.tmp$Tm <- Tm.tmp
     games.story.tmp$Opp <- Opp.tmp 
-    games.story.tmp$Result <- ifelse(as.numeric(games.story.tmp$Tm) > as.numeric(games.story.tmp$Opp), "W", "L")
+    games.story.tmp$Result <- ifelse(as.numeric(games.story.tmp$Tm) > as.numeric(games.story.tmp$Opp), 1, 0)
     
     games.story <- rbind(games.story, games.story.tmp[, -8])
 }
