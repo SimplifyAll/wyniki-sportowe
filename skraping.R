@@ -4,7 +4,7 @@
 library(rvest)
 library(XML)
 library(RCurl)
-
+library(stringi)
 #############################################################################################################################
 
 # Poniżej tworzymy data.frame team.names, w którym zawarta jest cała baza 
@@ -34,7 +34,8 @@ team.names$poprzed.skrot <- c(NA, NA, "NJN", "CHA", NA, NA, NA, NA, NA, NA, NA, 
 team.names$poprzed.nazwa <- c(NA, NA, "New Jersey Nets", "Charlotte Bobcats", NA, NA, NA, NA, NA, NA, NA, NA, NA,
                               NA, NA, NA, NA, NA, "New Orleans Hornets", NA, "Seattle SuperSonics", NA, NA, NA, NA,
                               NA, NA, NA, NA, NA)
-return(team.names)
+#return(team.names)
+assign("team.names" , team.names, env = .GlobalEnv )
 }
 ###############################################################################################################################
 
@@ -110,6 +111,14 @@ colnames(stats)[26:47] <- paste0("O",names(stats[26:47]))
 # Zamiana nazw na skróty
 stats$Team<-sapply(stats$Team, function(x) team.names[team.names$nazwa==x,2])
 
+for (k in 1:length(names(stats)))
+  {
+    zmienna <- names(stats)[k]
+    if(!is.na(stri_extract_all_regex(zmienna,"(.)+%$")==zmienna) 
+      | zmienna=="FT/FGA" | zmienna== "eFG%.1" | zmienna =="FT/FGA.1")
+      stats[,names(stats)==zmienna]<- as.numeric(as.character(stats[,names(stats)==zmienna])) 
+  }
+  
 # Data.frame stats jest już gotowy
 assign( "stats" , stats , env = .GlobalEnv )
 }
