@@ -9,34 +9,36 @@ library(RCurl)
 
 # Poniżej tworzymy data.frame team.names, w którym zawarta jest cała baza 
 # nazw i skrótów drużyn oraz zmian historycznych tych nazw
-
+team.names.fun <- function(){
 team.names <- data.frame(nazwa=rep("a",30), skrot=rep('a',30), rok.zmian=rep(NA,30), poprzed.nazwa=rep(NA,30),
-                      poprzed.skrot=rep('a',30))
+                         poprzed.skrot=rep('a',30))
 
 team.names$nazwa <- c("Atlanta Hawks", "Boston Celtics", "Brooklyn Nets", "Charlotte Hornets", "Chicago Bulls",
-                   "Cleveland Cavaliers", "Dallas Mavericks", "Denver Nuggets", "Detroit Pistons",
-                   "Golden State Warriors", "Houston Rockets", "Indiana Pacers", "Los Angeles Clippers",
-                   "Los Angeles Lakers", "Memphis Grizzlies", "Miami Heat", "Milwaukee Bucks",
-                   "Minnesota Timberwolves", "New Orleans Pelicans", "New York Knicks", "Oklahoma City Thunder",
-                   "Orlando Magic", "Philadelphia 76ers", "Phoenix Suns", "Portland Trail Blazers",
-                   "Sacramento Kings", "San Antonio Spurs", "Toronto Raptors", "Utah Jazz", "Washington Wizards")
+                      "Cleveland Cavaliers", "Dallas Mavericks", "Denver Nuggets", "Detroit Pistons",
+                      "Golden State Warriors", "Houston Rockets", "Indiana Pacers", "Los Angeles Clippers",
+                      "Los Angeles Lakers", "Memphis Grizzlies", "Miami Heat", "Milwaukee Bucks",
+                      "Minnesota Timberwolves", "New Orleans Pelicans", "New York Knicks", "Oklahoma City Thunder",
+                      "Orlando Magic", "Philadelphia 76ers", "Phoenix Suns", "Portland Trail Blazers",
+                      "Sacramento Kings", "San Antonio Spurs", "Toronto Raptors", "Utah Jazz", "Washington Wizards")
 
 team.names$skrot <- c("ATL", "BOS", "BRK", "CHO", "CHI", "CLE", "DAL", "DEN", "DET", "GSW", "HOU", "IND", "LAC",
-                   "LAL", "MEM", "MIA", "MIL", "MIN", "NOP", "NYK", "OKC", "ORL", "PHI", "PHO", "POR", "SAC",
-                   "SAS", "TOR", "UTA", "WAS")
+                      "LAL", "MEM", "MIA", "MIL", "MIN", "NOP", "NYK", "OKC", "ORL", "PHI", "PHO", "POR", "SAC",
+                      "SAS", "TOR", "UTA", "WAS")
 
 team.names$rok.zmian <- c(NA, NA, 2013, 2015, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 2014,
-                       NA, 2009, NA, NA, NA, NA, NA, NA, NA, NA, NA)
+                          NA, 2009, NA, NA, NA, NA, NA, NA, NA, NA, NA)
 
 team.names$poprzed.skrot <- c(NA, NA, "NJN", "CHA", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
-                           "NOH", NA, "SEA", NA, NA, NA, NA, NA, NA, NA, NA, NA)
+                              "NOH", NA, "SEA", NA, NA, NA, NA, NA, NA, NA, NA, NA)
 
 team.names$poprzed.nazwa <- c(NA, NA, "New Jersey Nets", "Charlotte Bobcats", NA, NA, NA, NA, NA, NA, NA, NA, NA,
-                           NA, NA, NA, NA, NA, "New Orleans Hornets", NA, "Seattle SuperSonics", NA, NA, NA, NA,
-                           NA, NA, NA, NA, NA)
-
+                              NA, NA, NA, NA, NA, "New Orleans Hornets", NA, "Seattle SuperSonics", NA, NA, NA, NA,
+                              NA, NA, NA, NA, NA)
+return(team.names)
+}
 ###############################################################################################################################
 
+stats.fun <- function(){
 # Poniżej tworzymy data.frame, który jest stworzony z danych opisujących różne statystyki drużyn na przełomie lat 2012-2016
 # Dla każdego roku na stronie mamy 3 tabele (Team Stats, Oponent Stats , Miscellaneous Stats) i tworzymy z nich jedną dużą,
 # zawierającą wszystkie dane dla wszystkich lat.
@@ -47,7 +49,7 @@ opponent.stats <- data.frame(matrix(numeric(0),ncol=26))
 miscellaneous.stats <- data.frame(matrix(numeric(0),ncol=26))
 
 
-for ( i in 1:5)    # Pętla ta ściąga w kolejnych iteracjach, ściąga dane z kolejnych lat. Od 2012 do 2016.
+for ( i in 1:6)    # Pętla ta ściąga w kolejnych iteracjach, ściąga dane z kolejnych lat. Od 2012 do 2016.
 {
     # Ściągnięcie tabel z jednego sezonu i przypisanie je do zmiennej tabele
     Year=paste0("201",i) 
@@ -109,17 +111,20 @@ colnames(stats)[26:47] <- paste0("O",names(stats[26:47]))
 stats$Team<-sapply(stats$Team, function(x) team.names[team.names$nazwa==x,2])
 
 # Data.frame stats jest już gotowy
-
+assign( "stats" , stats , env = .GlobalEnv )
+}
 #############################################################################################################################
-# Teraz przechodzimy do pobierania historii meczy dla każdej drużyny z 5 lat 
 
+games.story.fun <- function(){
+# Teraz przechodzimy do pobierania historii meczy dla każdej drużyny z 5 lat 
+team.names <- team.names.fun()
 # Wpierw tworzymy listę team.story która, będzie się składała z 30 data.frameów odpowiadających 30 drużynom
 # Do każdej drużyny ściagamy historię meczy z 5 lat
 
 team.story <- lapply(team.names$nazwa, function (x) x=data.frame()) # Tworzenie listy
 names(team.story) <- team.names$nazwa # Przypianie nazw drużyn dla data.frameów
 
-for ( i in 1:5) # Pętla ściagająca historie z 5 lat i wrzucająca to do team.story
+for ( i in 1:6) # Pętla ściagająca historie z 5 lat i wrzucająca to do team.story
 {
     year <- paste0("201", i)
     
@@ -203,10 +208,13 @@ names(Opponent.tmp)=NULL
 games.story$Opponent=as.vector(Opponent.tmp)
 
 # Sortowanie
-games.story=games.story[order(new$Year), -6]
+games.story=games.story[order(games.story$Year), -6]
 # Usunięcie replikowanych danych
 
 games.story <- games.story[!duplicated(games.story), ]
+
+assign( "games.story" , games.story , env = .GlobalEnv )
+}
 
 # Testy 
 # new[new$Year=="2014" & (new$Opponent=="Utah Jazz" | new$Host=="Utah Jazz") &
