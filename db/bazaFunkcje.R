@@ -148,7 +148,7 @@ createGames <- function(connection){
   game_date                 date,
   team_1_score              integer,
   team_2_score              integer,
-  if_win                    character,
+  if_win                    integer,
   season                    varchar(4) NOT NULL,
   CONSTRAINT games_pk PRIMARY KEY (id)
   )
