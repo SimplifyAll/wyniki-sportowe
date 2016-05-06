@@ -118,7 +118,11 @@ for (k in 1:length(names(stats)))
       | zmienna=="FT/FGA" | zmienna== "eFG%.1" | zmienna =="FT/FGA.1")
       stats[,names(stats)==zmienna]<- as.numeric(as.character(stats[,names(stats)==zmienna])) 
   }
-  
+stats$Team = as.character(stats$Team)
+stats$Team[19:24] = "CHO"
+stats$Team[109:114] = "NOP"
+stats$Attendance = as.numeric(gsub(",", "", stats$Attendance))
+
 # Data.frame stats jest już gotowy
 assign( "stats" , stats , env = .GlobalEnv )
 }

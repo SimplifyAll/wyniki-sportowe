@@ -186,11 +186,11 @@ dbSendQuery(conn=con, statement = sql_command)
 
 # INSERT
 #dbSendPreparedQuery(con, "INSERT INTO teams() VALUES (?,?,?,?,?)", team.names) w przypadku 
-dbWriteTable(con, "teams", 
-             value = team.names, append = TRUE, row.names = FALSE)
-games.story <- data.frame(id=t(t(c(1:nrow(games.story)))),games.story[,-6]) # to będzie ogarnięte z poziomu Ra
-dbWriteTable(con, "seasons", value = data.frame(season=as.character(c(2011:2015))), append = TRUE, row.names = FALSE)
-dbWriteTable(con, "games", value = games.story[,-7], append = TRUE, row.names = FALSE)
+#dbWriteTable(con, "teams", 
+#             value = team.names, append = TRUE, row.names = FALSE)
+#games.story <- data.frame(id=t(t(c(1:nrow(games.story)))),games.story[,-6]) # to będzie ogarnięte z poziomu Ra
+#dbWriteTable(con, "seasons", value = data.frame(season=as.character(c(2011:2015))), append = TRUE, row.names = FALSE)
+#dbWriteTable(con, "games", value = games.story[,-7], append = TRUE, row.names = FALSE)
 
 
 
