@@ -50,7 +50,7 @@ opponent.stats <- data.frame(matrix(numeric(0),ncol=26))
 miscellaneous.stats <- data.frame(matrix(numeric(0),ncol=26))
 
 
-for ( i in 1:6)    # Pętla ta ściąga w kolejnych iteracjach, ściąga dane z kolejnych lat. Od 2012 do 2016.
+for ( i in 1:5)    # Pętla ta ściąga w kolejnych iteracjach, ściąga dane z kolejnych lat. Od 2011 do 2015.
 {
     # Ściągnięcie tabel z jednego sezonu i przypisanie je do zmiennej tabele
     Year=paste0("201",i) 
@@ -129,7 +129,8 @@ assign( "stats" , stats , env = .GlobalEnv )
 #############################################################################################################################
 
 games.story.fun <- function(){
-# Teraz przechodzimy do pobierania historii meczy dla każdej drużyny z 5 lat 
+# Teraz przechodzimy do pobierania historii meczy dla każdej drużyny z 5 lat + 2016 rok jako informacja o rozkładzie meczy
+# w sezonie 2015/2016
 team.names <- team.names.fun()
 # Wpierw tworzymy listę team.story która, będzie się składała z 30 data.frameów odpowiadających 30 drużynom
 # Do każdej drużyny ściagamy historię meczy z 5 lat
