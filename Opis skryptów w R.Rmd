@@ -2,7 +2,7 @@
 
 Skrypt skraping.R służy do ściągnięcia potrzebnych nam danych i umieszczeniu ich w 3 data.framach, których opis umieszczam poniżej.
 
-## Data.frame team.names
+## Data.frame team_names
 
 Data.frame, który zawiera następujące kolumny:
 
@@ -85,7 +85,7 @@ Data.frame, który zawiera następujące kolumny:
 * Arena - nazwa stadionu
 * Attendance - suma liczby kibiców z każdego meczu
 
-## Data.frame games.history
+## Data.frame games_history
 
 Data.frame, który zawiera następujące kolumny:
 * Host - Skrót nazwy drużyny gospodarzy
@@ -96,7 +96,7 @@ Data.frame, który zawiera następujące kolumny:
 * Result - Rezultat meczu (W to wygrana gospodarzy , L to wygrana gości)
 * Year - Sezon rozegrania meczu
 
-## Lista team.story
+## Lista team_story
 
 Jest to lista zawierająca 30 data.framów o nazwach drużyn. Każdy z nich odpowiada 5 letniej historii meczów dla zespołu.
 
@@ -110,7 +110,9 @@ W każdym data.framie znajdują sie kolumny:
 * Where - Jeśli @ to na wyjeździe, jeśli pusto to w domu
 * Year - Rok
 
-
+#Skrypt bazaFunkcje.R umożliwia automatyczne utworzenie i zapełnienie bazy scrapowanymi danymi
+#Należy go wykonać po wcześniejszym source skraping.R
+#Celem wgrania środowiska i utworzenia bazy wykonuje się funkcję setupEnvironment()
 
 
 

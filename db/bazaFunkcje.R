@@ -11,7 +11,7 @@ connect <- function(){
   return(con)
 }
 
-createBettingFirms <- function(connection){
+create_betting_firms <- function(connection){
   sql_command <- "CREATE TABLE betting_firms (
   name varchar(64),
   CONSTRAINT betting_firms_pk PRIMARY KEY (name)
@@ -22,7 +22,7 @@ createBettingFirms <- function(connection){
   dbSendQuery(conn = connection, statement = sql_command)
 }
 
-createTeams <- function(connection){
+create_teams <- function(connection){
   sql_command <- "CREATE TABLE teams (
   current_name  varchar(30),
   id            varchar(4) NOT NULL,
@@ -37,7 +37,7 @@ createTeams <- function(connection){
   dbSendQuery(conn=connection, statement = sql_command)
 }
 
-createSeasons <- function(connection) {
+create_seasons <- function(connection) {
   sql_command <- "CREATE TABLE seasons (
   yearStart varchar(4),
   CONSTRAINT seasons_pk PRIMARY KEY (yearStart)
@@ -48,9 +48,9 @@ createSeasons <- function(connection) {
   dbSendQuery(conn=connection, statement = sql_command)
 }
 
-createTeamSeasonStatistics <- function(connection) {
+create_team_season_statistics <- function(connection) {
   sql_command <- "CREATE TABLE team_season_statistics (
-team_id					  	      	varchar(4) NOT NULL,
+  team_id					  	      	varchar(4) NOT NULL,
   game_num					        	integer,
   min_play					        	integer,
   total_field_goals		    		integer,
@@ -137,7 +137,7 @@ team_id					  	      	varchar(4) NOT NULL,
   dbSendQuery(conn=connection, statement = sql_command)
 }
 
-createGames <- function(connection){
+create_games <- function(connection){
   sql_command <- "CREATE TABLE games (
   id                        integer,
   team_1_id                 varchar(4) NOT NULL,
@@ -164,7 +164,7 @@ createGames <- function(connection){
   dbSendQuery(conn=connection, statement = sql_command)
 }
 
-createBets <-function(connection){
+create_bets <-function(connection){
   sql_command <- "CREATE TABLE bets (
   team_1_chances      integer,
   team_2_chances      integer,
@@ -185,58 +185,58 @@ createBets <-function(connection){
   dbSendQuery(conn=connection, statement = sql_command)
 }
 
-createDB <- function(connection){
-  createBettingFirms(connection = connection)
-  createTeams(connection = connection)
-  createSeasons(connection = connection)
-  createTeamSeasonStatistics(connection = connection)
-  createGames(connection = connection)
-  createBets(connection = connection)
+create_DB <- function(connection){
+  create_betting_firms(connection = connection)
+  create_teams(connection = connection)
+  create_seasons(connection = connection)
+  create_team_season_statistics(connection = connection)
+  create_games(connection = connection)
+  create_bets(connection = connection)
 }
 
-write.teams <- function(connection, cleanUp){
-  team.names.fun()
+write_teams <- function(connection, cleanUp){
+  get_team_names()
   dbWriteTable(connection, "teams", 
-             value = team.names, append = TRUE, row.names = FALSE)
+             value = team_names, append = TRUE, row.names = FALSE)
   if(cleanUp)
-    rm(team.names)
+    rm(team_names)
 }
 
-write.seasons <- function(connection) {
+write_seasons <- function(connection) {
   dbWriteTable(connection, "seasons", value = data.frame(season=as.character(c(2011:2016))),
                            append = TRUE, row.names = FALSE)
 }
 
-write.games.story <- function(connection, cleanUp){
-  games.story.fun()
-  games.story <- data.frame(id=t(t(c(1:nrow(games.story)))),games.story)
-  dbWriteTable(connection, "games", value = games.story, append = TRUE, row.names = FALSE)
+write_games_story <- function(connection, cleanUp){
+  get_games_story()
+  games_story <- data.frame(id=t(t(c(1:nrow(games_story)))),games_story)
+  dbWriteTable(connection, "games", value = games_story, append = TRUE, row.names = FALSE)
   if(cleanUp)
-    rm(games.story)
+    rm(games_story)
 }
 
-write.team_season_stats <- function(connection, cleanUp){
-  stats.fun()
+write_team_season_stats <- function(connection, cleanUp){
+  get_stats()
   dbWriteTable(connection, "team_season_statistics", value = stats, append = TRUE, row.names = FALSE)
   if(cleanUp)
     rm(stats)
 }
 
-setupEnvironment <- function(){
+setup_environment <- function(){
   con = connect()
   print("Created Connection")
-  createDB(connection = con)
+  create_DB(connection = con)
   print("Database Constructed")
-  write.teams(connection = con, FALSE)
+  write_teams(connection = con, FALSE)
   print("Teams inserted")
-  write.seasons(connection = con)
+  write_seasons(connection = con)
   print("Seasons inserted")
-  write.games.story(connection = con, FALSE)
+  write_games_story(connection = con, FALSE)
   print("Games inserted")
-  write.team_season_stats(connection = con, FALSE)
+  write_team_season_stats(connection = con, FALSE)
   print("Statistics Inserted")
   disconnect(connection = con)
-  print("Setup Finishe disconnecting from DB")
+  print("Setup Finished disconnecting from DB")
 }
 
 
