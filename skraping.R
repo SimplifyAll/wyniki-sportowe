@@ -10,8 +10,8 @@ library(stringi)
 # Poniżej tworzymy data.frame team.names, w którym zawarta jest cała baza 
 # nazw i skrótów drużyn oraz zmian historycznych tych nazw
 get_team_names <- function(){
-    team_names <- data.frame(name=rep("a",30), shortage=rep('a',30), change_year=rep(NA,30), previous_name=rep(NA,30),
-                             previous_shortage=rep('a',30))
+    team_names <- data.frame(name=rep("a",30), shortcut=rep('a',30), change_year=rep(NA,30), previous_name=rep(NA,30),
+                             previous_shortcut=rep('a',30))
     
     team_names$name <- c("Atlanta Hawks", "Boston Celtics", "Brooklyn Nets", "Charlotte Hornets", "Chicago Bulls",
                           "Cleveland Cavaliers", "Dallas Mavericks", "Denver Nuggets", "Detroit Pistons",
@@ -21,14 +21,14 @@ get_team_names <- function(){
                           "Orlando Magic", "Philadelphia 76ers", "Phoenix Suns", "Portland Trail Blazers",
                           "Sacramento Kings", "San Antonio Spurs", "Toronto Raptors", "Utah Jazz", "Washington Wizards")
     
-    team_names$shortage <- c("ATL", "BOS", "BRK", "CHO", "CHI", "CLE", "DAL", "DEN", "DET", "GSW", "HOU", "IND", "LAC",
+    team_names$shortcut <- c("ATL", "BOS", "BRK", "CHO", "CHI", "CLE", "DAL", "DEN", "DET", "GSW", "HOU", "IND", "LAC",
                           "LAL", "MEM", "MIA", "MIL", "MIN", "NOP", "NYK", "OKC", "ORL", "PHI", "PHO", "POR", "SAC",
                           "SAS", "TOR", "UTA", "WAS")
     
     team_names$change_year <- c(NA, NA, 2013, 2015, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, 2014,
                               NA, 2009, NA, NA, NA, NA, NA, NA, NA, NA, NA)
     
-    team_names$previous_shortage <- c(NA, NA, "NJN", "CHA", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
+    team_names$previous_shortcut <- c(NA, NA, "NJN", "CHA", NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,
                                   "NOH", NA, "SEA", NA, NA, NA, NA, NA, NA, NA, NA, NA)
     
     team_names$previous_name <- c(NA, NA, "New Jersey Nets", "Charlotte Bobcats", NA, NA, NA, NA, NA, NA, NA, NA, NA,
@@ -142,9 +142,9 @@ get_games_story <- function(){
     {
         year <- paste0("201", i)
         
-        for(j in 1:length(team_names$shortage)) # Pętla rozwiącująca problem zmian nazw drużyn.
+        for(j in 1:length(team_names$shortcut)) # Pętla rozwiącująca problem zmian nazw drużyn.
         {
-            team_names_tmp <- team_names$shortage[j]
+            team_names_tmp <- team_names$shortcut[j]
             if((i==1 | i==2) & j==3)
             {
                 team_names_tmp <- "NJN"
