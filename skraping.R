@@ -56,10 +56,10 @@ get_stats<- function(){
         Year=paste0("201",i) 
         html <- paste0("http://www.basketball-reference.com/leagues/NBA_",Year,".html")
         URL<-getURL(html)
-        tabele <- readHTMLTable(URL,h=T)
+        tables <- readHTMLTable(URL,h=T)
         
         # Dopisanie danych do tabeli team.stats
-        team_tmp <- tabele$team  # Przypisanie danych dotyczących Team Stats do pomocniczej zmiennej team.tmp
+        team_tmp <- tables$team  # Przypisanie danych dotyczących Team Stats do pomocniczej zmiennej team.tmp
         team_tmp$Team <- gsub('\\*', '',team_tmp$Team)  # Usunięcie gwiazdek z nazw zespołów
         team_tmp <- cbind(team_tmp,Year) # Dodanie na koniec kolumny, określającej rok
         team_tmp <- team_tmp[1:30,2:27] # 1:30 ponieważ chcemy pozbyć się wiersza 'average', 2:26 by usunąć 1 niepotrzebną kolumnę
@@ -68,7 +68,7 @@ get_stats<- function(){
         team_stats <- rbind(team_stats,team_tmp) # Dopisanie kolejnych rekordów do tabeli team.stats
         
         # Dopisanie danych do tabeli opponent.stats, analogiczne jak wyżej
-        opponent_tmp <- tabele$opponent
+        opponent_tmp <- tables$opponent
         opponent_tmp$Team <- gsub('\\*', '',opponent_tmp$Team)
         opponent_tmp <- cbind(opponent_tmp,Year) 
         opponent_tmp <- opponent_tmp[1:30,2:27]
@@ -77,7 +77,7 @@ get_stats<- function(){
         opponent_stats <- rbind(opponent_stats,opponent_tmp)
         
         # Dopisanie danych do tabeli miscellaneous.stats, analogiczne jak wyżej
-        miscellaneous_tmp <- tabele$misc
+        miscellaneous_tmp <- tables$misc
         miscellaneous_tmp$Team <- gsub('\\*', '',miscellaneous_tmp$Team)
         miscellaneous_tmp <- cbind(miscellaneous_tmp,Year) 
         miscellaneous_tmp <- miscellaneous_tmp[1:30,2:25]
