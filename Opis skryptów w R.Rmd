@@ -10,7 +10,7 @@ Data.frame, który zawiera następujące kolumny:
 * shortage - aktualny skrót nazwy drużyny
 * change_year - rok od którego zaczęła obowiązywać aktualna nazwa, jeśli NA to znaczy, ze od dawna
 * previous_name - poprzednia nazwa drużyny, NA jeśli w rok.zmian NA
-* previous_shortage - skrót poprzedniej nazwy drużyny, NA jeśli w rok.zmian NA
+* previous_shortcut - skrót poprzedniej nazwy drużyny, NA jeśli w rok.zmian NA
 
 ## Data.frame stats
 
