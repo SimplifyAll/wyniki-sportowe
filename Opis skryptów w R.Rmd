@@ -6,11 +6,11 @@ Skrypt skraping.R służy do ściągnięcia potrzebnych nam danych i umieszczeni
 
 Data.frame, który zawiera następujące kolumny:
 
-* nazwa - aktualna nazwa drużyny
-* skrot - aktualny skrót nazwy drużyny
-* rok.zmian - rok od którego zaczęła obowiązywać aktualna nazwa, jeśli NA to znaczy, ze od dawna
-* poprzed.nazwa - poprzednia nazwa drużyny, NA jeśli w rok.zmian NA
-* poprzed.skrot - skrót poprzedniej nazwy drużyny, NA jeśli w rok.zmian NA
+* name - aktualna nazwa drużyny
+* shortage - aktualny skrót nazwy drużyny
+* change_year - rok od którego zaczęła obowiązywać aktualna nazwa, jeśli NA to znaczy, ze od dawna
+* previous_name - poprzednia nazwa drużyny, NA jeśli w rok.zmian NA
+* previous_shortage - skrót poprzedniej nazwy drużyny, NA jeśli w rok.zmian NA
 
 ## Data.frame stats
 
