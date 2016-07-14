@@ -1,0 +1,19 @@
+Package: pakiet
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: person("Aliaksandr", "Panimash", email = "ponimasza@student.mini.pw.edu.pl", role = c("aut", "cre"))
+Maintainer: Aliaksandr Panimash <alex.panimash@gmail.com>
+Description: Dany pakiet  zawiera funkcji do pobierania danych ze strony <basketball-reference.com/> 
+            oraz wrzucenia pobranych danych do bazy.
+BugReports: https://github.com/Kolo-Naukowe-Data-Science-PW/wyniki-sportowe
+Depends: R (>= 3.1.0)
+License: GPL-2
+Encoding: UTF-8
+LazyLoad: true
+LazyData: true
+Version: 0.1
+Imports: rvest,
+         XML,
+         RCurl,
+         stringi, 
+         RPostgreSQL
