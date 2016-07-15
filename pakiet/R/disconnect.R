@@ -1,14 +1,14 @@
 #' Disconnect database
 #' 
-#' Function \code{disconnect} removes connection with a PostgreSQL database
+#' Function \code{disconnect} removes connection with a PostgreSQL database.
 #'
 #' @usage disconnect(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' disconnect(connection)}
 #'

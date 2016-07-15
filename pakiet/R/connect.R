@@ -1,6 +1,6 @@
 #' Databse connection
 #' 
-#' Function \code{connect} establishes a connection with a PostgreSQL database
+#' Function \code{connect} establishes a connection with a PostgreSQL database.
 #'
 #' @usage connect(dbname, user, password, host, port=5432)
 #'
@@ -10,9 +10,9 @@
 #' @param host name of host
 #' @param port number of port
 #'
-#' @return connection to database |||| nie wiem jak to nazwać ||||
+#' @return connection to database
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' connect(dbname, user, password, host, 5432)}
 #'

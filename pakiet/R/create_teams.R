@@ -1,14 +1,14 @@
 #' Table with teams
 #' 
-#' Function \code{create_teams} creates a table containing teams in a PostgreSQL database
+#' Function \code{create_teams} creates a table containing teams in a PostgreSQL database.
 #'
 #' @usage create_teams(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' create_teams(connection)}
 #'

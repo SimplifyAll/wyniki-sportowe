@@ -2,15 +2,15 @@
 #' 
 #' Function \code{get_stats} downloads team statistics from the basketball-reference.com website
 #' and creates data frame with them for all NBA teams.
-#' Data frame contains statistics from 2011 to 2015.
+#' Data frame contains statistics from 2011 to 2016.
 #'
 #' @usage get_stats()
 #'
 #' @param
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' get_stats()}
 #'
@@ -28,7 +28,7 @@ get_stats<- function()
   miscellaneous_stats <- data.frame(matrix(numeric(0),ncol=26))
   
   
-  for ( i in 1:5)    
+  for ( i in 1:6)    
   {
     
     Year=paste0("201",i) 

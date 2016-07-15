@@ -1,14 +1,14 @@
 #' Table with betting firms
 #' 
-#' Function \code{create_betting_firms} creates a table containing betting firms in a PostgreSQL database
+#' Function \code{create_betting_firms} creates a table containing betting firms in a PostgreSQL database.
 #'
 #' @usage create_betting_firms(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' create_betting_firms(connection)}
 #'

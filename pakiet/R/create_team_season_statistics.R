@@ -1,14 +1,14 @@
 #' #' Table with team season statistics
 #' 
-#' Function \code{create_team_season_statistics} creates a table containing team season statistics in a PostgreSQL database
+#' Function \code{create_team_season_statistics} creates a table containing team season statistics in a PostgreSQL database.
 #'
 #' @usage create_team_season_statistics(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' create_team_season_statistics(connection)}
 #'

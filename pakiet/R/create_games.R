@@ -1,14 +1,14 @@
 #' Table with games history
 #' 
-#' Function \code{create_games} creates a table containing games history in a PostgreSQL database
+#' Function \code{create_games} creates a table containing games history in a PostgreSQL database.
 #'
 #' @usage create_games(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' create_games(connection)}
 #'

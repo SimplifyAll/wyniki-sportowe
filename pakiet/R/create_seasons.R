@@ -1,14 +1,14 @@
 #' Table with seasons
 #' 
-#' Function \code{create_seasons} creates a table containing seasons in a PostgreSQL database
+#' Function \code{create_seasons} creates a table containing seasons in a PostgreSQL database.
 #'
 #' @usage create_seasons(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' create_seasons(connection)}
 #'

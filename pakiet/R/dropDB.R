@@ -1,14 +1,14 @@
 #' Droping tables
 #' 
-#' Function \code{dropDB} removes all tables from PostgreSQL database
+#' Function \code{dropDB} removes all tables from PostgreSQL database.
 #'
 #' @usage dropDB(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' dropDB(connection)}
 #'

@@ -1,14 +1,14 @@
 #' Table with bets
 #' 
-#' Function \code{create_bets} creates a table containing bets in a PostgreSQL database
+#' Function \code{create_bets} creates a table containing bets in a PostgreSQL database.
 #'
 #' @usage create_bets(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' create_bets(connection)}
 #'

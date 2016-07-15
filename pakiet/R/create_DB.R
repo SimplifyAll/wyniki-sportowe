@@ -1,15 +1,15 @@
 #' Create all database tables
 #'
-#' Function \code{create_DB} creates database containint tables:create_betting_firms,create_teams,create_seasons,
-#' create_team_season_statistics,create_games,create_bets
+#' Function \code{create_DB} creates database containint tables:betting_firms, teams, seasons,
+#' team_season_statistics, games, bets.
 #' 
 #' @usage create_DB(connection)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #'
-#' @return 
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' create_DB(connection)}
 #'

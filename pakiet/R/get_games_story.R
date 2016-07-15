@@ -2,15 +2,15 @@
 #' 
 #' Function \code{get_games_story} downloads game statistics from the basketball-reference.com website
 #' and creates data frame with them for all NBA teams.
-#' Data frame contains games history from 2011 to 2015.
+#' Data frame contains games history from 2011 to 2016.
 #'
 #' @usage get_games_story()
 #'
 #' @param
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' get_games_story()}
 #'
