@@ -19,7 +19,7 @@ get_odds <- function(path)
     repeat
     {
       
-      #odwolanie do biezacego sezonu jest inne ni¿ do historycznych
+      #odwolanie do biezacego sezonu jest inne niÂ¿ do historycznych
       if (year==6){
         
         page <- paste0("http://www.oddsportal.com/basketball/usa/nba/results/#/page/", j, "/")
@@ -71,7 +71,7 @@ get_odds <- function(path)
       
       #scrapowanie nazw zespolow, wynikow i dat
       teams <- html_nodes(whole_page, xpath = '//*[@class="name table-participant"]')
-      teams <- stri_replace_all_fixed(html_text(teams), "Â", "")
+      teams <- stri_replace_all_fixed(html_text(teams), "Ã‚", "")
       teams <- strsplit(teams, "-")
       teams <- do.call("rbind", lapply(teams, stri_trim_both))
       
@@ -114,7 +114,7 @@ get_odds <- function(path)
   to_errase<-odds_history$Host %in% team_names$name
   odds_history<-odds_history[to_errase,]
   
-  # Zamiana nazw na skroty
+  #zamiana nazw na skroty
   Host <- unlist(sapply(odds_history$Host, function(x) team_names[team_names$name==x,2]))
   names(Host)=NULL
   odds_history$Host=as.vector(Host)
@@ -123,14 +123,19 @@ get_odds <- function(path)
   names(Opponent_tmp)=NULL
   odds_history$Opponent=as.vector(Opponent_tmp)
   
-  #Zamiana brakow danych przy zakladach na 0
+  #zamiana brakow danych przy zakladach na 0
   odds_history$Tm_odd<-factor(odds_history$Tm_odd,levels=c(levels(odds_history$Tm_odd),0))
   odds_history$Tm_odd[odds_history$Tm_odd=="-"]<-0
   odds_history$Opp_odd<-factor(odds_history$Opp_odd,levels=c(levels(odds_history$Opp_odd),0))
   odds_history$Opp_odd[odds_history$Opp_odd=="-"]<-0
   
-  # Sortowanie
+  #sortowanie
   odds_history=odds_history[order(odds_history$Date),]
+  
+  #usuniecie stworzonych plikow
+  file.remove("page_file.html")
+  file.remove("scrap_page_file.js")
+  
   assign( "odds_history" , odds_history , env = .GlobalEnv )
   setwd(old_wd)
 }
