@@ -71,7 +71,7 @@ get_odds <- function(path)
       
       #scraping: names, results and dates
       teams <- html_nodes(whole_page, xpath = '//*[@class="name table-participant"]')
-      teams <- stri_replace_all_fixed(html_text(teams), "Â", "")
+      teams <- stri_replace_all_fixed(html_text(teams), "Ã‚", "")
       teams <- strsplit(teams, "-")
       teams <- do.call("rbind", lapply(teams, stri_trim_both))
       
@@ -131,6 +131,11 @@ get_odds <- function(path)
   
   #sorting
   odds_history=odds_history[order(odds_history$Date),]
+  
+  #delete files that has been created
+  file.remove("page_file.html")
+  file.remove("scrap_page_file.js")
+  
   assign( "odds_history" , odds_history , env = .GlobalEnv )
   setwd(old_wd)
 }
