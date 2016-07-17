@@ -1,17 +1,23 @@
-Package: pakiet
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("Aliaksandr", "Panimash", email = "ponimasza@student.mini.pw.edu.pl", role = c("aut", "cre"))
+Package: NBAResults
+Title: Prediction of NBA
+Version: 0.1
+Date: 2016-07-17
+Authors@R: c(
+   person("Aliaksandr", "Panimash", email = "ponimasza@student.mini.pw.edu.pl", role = c("aut", "cre")),
+   person("Dawid", "Stelmach", email = "", role = "aut"),
+   person("Kacper", "Roszczyna", email = "", role = "aut"),
+   person("Szymon", "Bazyluk", email = "", role = "aut"),
+   person("Ania", "Elsner", email = "", role = "aut"),
+   person("Piotr", "Smuda", email = "piotrsmuda@gmail.com", role = "aut"))
 Maintainer: Aliaksandr Panimash <alex.panimash@gmail.com>
-Description: Dany pakiet  zawiera funkcji do pobierania danych ze strony <basketball-reference.com/> 
-            oraz wrzucenia pobranych danych do bazy.
+Description: Set of functions that scrap data about NBA from webpages: basketball-reference.com,
+    and http://www.oddsportal.com, store it in PostgreSQL database and make prediction of NBA.
 BugReports: https://github.com/Kolo-Naukowe-Data-Science-PW/wyniki-sportowe
 Depends: R (>= 3.1.0)
 License: GPL-2
 Encoding: UTF-8
 LazyLoad: true
 LazyData: true
-Version: 0.1
 Imports: rvest,
          XML,
          RCurl,
