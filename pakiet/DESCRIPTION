@@ -18,8 +18,9 @@ License: GPL-2
 Encoding: UTF-8
 LazyLoad: true
 LazyData: true
-Imports: rvest,
-         XML,
-         RCurl,
-         stringi, 
-         RPostgreSQL
+Imports: 
+      rvest,
+      XML,
+      RCurl,
+      stringi, 
+      RPostgreSQL
