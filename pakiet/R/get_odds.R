@@ -14,7 +14,7 @@
 #' \dontrun{
 #' getodds(path)}
 #'
-#' @author XXXXXXXXX
+#' @author Ania Elsner, Piotr Smuda
 #'
 #' @export
 
