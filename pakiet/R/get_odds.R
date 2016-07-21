@@ -6,13 +6,17 @@
 #'
 #' @usage get_odds(path)
 #'
-#' @param path  path where files will be saved in 
+#' @param path  path where phantomjs.exe file is contained
 #'
 #' @return NULL
 #'
 #' @examples
 #' \dontrun{
 #' getodds(path)}
+#'
+#' @note  
+#' PhantomJS is needed to proper operation of this function. 
+#' You can download it from http://phantomjs.org/download.html.
 #'
 #' @author Ania Elsner, Piotr Smuda
 #'
