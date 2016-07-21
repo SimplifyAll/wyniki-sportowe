@@ -7,7 +7,7 @@
 #' @param connection connection to the database
 #' @param cleanUP parameter if the data frame will be removed after adding to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
 #' @example
 #' \dontrun{
