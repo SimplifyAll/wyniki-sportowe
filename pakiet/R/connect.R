@@ -1,4 +1,4 @@
-#' Databse connection
+#' Database connection
 #' 
 #' Function \code{connect} establishes a connection with a PostgreSQL database.
 #'
