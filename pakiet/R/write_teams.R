@@ -1,10 +1,10 @@
-#' Addig team names to database
+#' Adding team names to database
 #'
 #' Function \code{write_teams} adds team names to the PostgreSQL database.
 #'
 #' @usage write_teams(connection, cleanUp)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #' @param cleanUP parameter if the data frame will be removed after adding to the database
 #'
 #' @return ?????NULL????? TODO
