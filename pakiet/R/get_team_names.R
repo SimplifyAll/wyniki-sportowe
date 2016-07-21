@@ -1,6 +1,6 @@
 #' Data frame with team names
 #' 
-#' Function \code{get_team_names} creates data frame with all NBA team names and their abbreviation
+#' Function \code{get_team_names} creates data frame with all NBA team names and their abbreviation.
 #'
 #' @usage get_team_names()
 #'
