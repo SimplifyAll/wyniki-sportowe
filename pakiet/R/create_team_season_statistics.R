@@ -1,4 +1,4 @@
-#' #' Table with team season statistics
+#' Table with team season statistics
 #' 
 #' Function \code{create_team_season_statistics} creates a table containing team season statistics in a PostgreSQL database.
 #'
