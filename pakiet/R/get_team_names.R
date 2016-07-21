@@ -6,7 +6,7 @@
 #'
 #' @param
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
 #' @example
 #' \dontrun{
