@@ -1,6 +1,6 @@
 #' Data frame with bookmaker statistics for NBA teams
 #' 
-#' Function \code{get_odds} downloads nba games bets from  http://www.oddsportal.com 
+#' Function \code{get_odds} downloads nba games bets from  http://www.oddsportal.com website
 #' and creates data frame with them for all NBA teams.
 #' Data frame bookmaker statistics from 2011 to 2016.
 #'
