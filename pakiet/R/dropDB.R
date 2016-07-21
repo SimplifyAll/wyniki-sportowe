@@ -1,4 +1,4 @@
-#' Droping tables
+#' Dropping tables
 #' 
 #' Function \code{dropDB} removes all tables from PostgreSQL database.
 #'
