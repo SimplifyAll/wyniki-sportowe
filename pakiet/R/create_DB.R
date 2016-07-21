@@ -1,6 +1,6 @@
 #' Create all database tables
 #'
-#' Function \code{create_DB} creates database containint tables:betting_firms, teams, seasons,
+#' Function \code{create_DB} creates database containing tables: betting_firms, teams, seasons,
 #' team_season_statistics, games, bets.
 #' 
 #' @usage create_DB(connection)
