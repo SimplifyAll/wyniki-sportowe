@@ -1,13 +1,13 @@
-#' Addig games story to database
+#' Adding games story to database
 #'
 #' Function \code{write_games_story} adds games story to the PostgreSQL database.
 #'
 #' @usage write_games_story(connection, cleanUp)
 #'
-#' @param connection connection to the database.
+#' @param connection connection to the database
 #' @param cleanUP parameter if the data frame will be removed after adding to the database
 #'
-#' @return ?????NULL????? TODO
+#' @return NULL
 #'
 #' @example
 #' \dontrun{
