@@ -1,6 +1,6 @@
 #' Set up the environment
 #' 
-#' Function \code{setup_environment} sets up whole work environment on PostgreSQL database
+#' Function \code{setup_environment} sets up whole work environment on PostgreSQL database.
 #'
 #' @usage setup_environment()
 #'
