@@ -12,7 +12,7 @@
 #' \dontrun{
 #' create_games(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna Dawid Stlemach
 #'
 #' @export
 

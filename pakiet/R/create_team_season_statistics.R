@@ -12,7 +12,7 @@
 #' \dontrun{
 #' create_team_season_statistics(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna Dawid Stlemach
 #'
 #' @export
 

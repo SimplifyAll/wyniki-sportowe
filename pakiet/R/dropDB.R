@@ -12,7 +12,7 @@
 #' \dontrun{
 #' dropDB(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna
 #'
 #' @export
 

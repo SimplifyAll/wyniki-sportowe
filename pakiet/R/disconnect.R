@@ -12,7 +12,7 @@
 #' \dontrun{
 #' disconnect(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna
 #'
 #' @export
 

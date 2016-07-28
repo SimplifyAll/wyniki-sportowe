@@ -13,7 +13,7 @@
 #' \dontrun{
 #' create_DB(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna Dawid Stlemach
 #'
 #' @export
 

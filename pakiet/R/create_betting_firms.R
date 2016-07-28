@@ -12,7 +12,7 @@
 #' \dontrun{
 #' create_betting_firms(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna Dawid Stlemach
 #'
 #' @export
 

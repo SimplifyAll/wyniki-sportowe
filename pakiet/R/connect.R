@@ -16,7 +16,7 @@
 #' \dontrun{
 #' connect(dbname, user, password, host, 5432)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna Dawid Stlemach
 #'
 #' @export
 
@@ -28,14 +28,14 @@ connect <- function(dbname, user, password, host, port=5432){
   return(con)
 }
 
-#connect <- function(){
-#  pw <- {
-#   "dataScience"
-#  }
-#  driver <- dbDriver("PostgreSQL")
-#  con <- dbConnect(driver, dbname="basketball", 
+#	connect <- function(){
+#  		pw <- {
+#   	"dataScience"
+#  		}
+#  		driver <- dbDriver("PostgreSQL")
+#  		con <- dbConnect(driver, dbname="basketball", 
 #                   host= "localhost", port=5432,
 #                   user="kndatascience", password=pw )
-#  rm(pw)
-#  return(con)
-#}
+#  	rm(pw)
+#  	return(con)
+#	}

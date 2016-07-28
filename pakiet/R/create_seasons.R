@@ -12,7 +12,7 @@
 #' \dontrun{
 #' create_seasons(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna Dawid Stlemach
 #'
 #' @export
 #' 

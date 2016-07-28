@@ -12,7 +12,7 @@
 #' \dontrun{
 #' create_teams(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna Dawid Stlemach
 #'
 #' @export
 
