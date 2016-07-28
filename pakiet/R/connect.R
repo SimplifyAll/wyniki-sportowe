@@ -16,7 +16,7 @@
 #' \dontrun{
 #' connect(dbname, user, password, host, 5432)}
 #'
-#' @author Kacper Roszczyna Dawid Stlemach
+#' @author Kacper Roszczyna, Dawid Stlemach
 #'
 #' @export
 
