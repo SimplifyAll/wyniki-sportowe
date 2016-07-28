@@ -14,7 +14,7 @@
 #' write_games_story(connection, 1),
 #' write_games_story(connection, 0)}
 #'
-#' @author XXXXXXXXX
+#' @author Aliaksandr Panimash, Dawid Stelmach
 #'
 #' @export
 
