@@ -12,7 +12,7 @@
 #' \dontrun{
 #' write_seasons(connection)}
 #'
-#' @author XXXXXXXXX
+#' @author Aliaksandr Panimash, Dawid Stelmach
 #'
 #' @export
 
