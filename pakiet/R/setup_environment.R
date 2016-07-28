@@ -12,7 +12,7 @@
 #' \dontrun{
 #' setup_environment()}
 #'
-#' @author XXXXXXXXX
+#' @author Kacper Roszczyna
 #'
 #' @export
 
