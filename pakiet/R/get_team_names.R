@@ -12,7 +12,7 @@
 #' \dontrun{
 #' get_team_names()}
 #'
-#' @author XXXXXXXXX
+#' @author Szymon Bazyluk, Aliaksandr Panimash
 #'
 #' @export
 
