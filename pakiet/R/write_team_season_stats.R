@@ -14,7 +14,7 @@
 #' write_team_season_stats(connection, 1),
 #' write_team_season_stats(connection, 0)}
 #'
-#' @author XXXXXXXXX
+#' @author Aliaksandr Panimash, Dawid Stelmach
 #'
 #' @export
 
