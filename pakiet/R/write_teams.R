@@ -14,7 +14,7 @@
 #' write_teams(connection, 1),
 #' write_teams(connection, 0)}
 #'
-#' @author XXXXXXXXX
+#' @author Aliaksandr Panimash, Dawid Stelmach
 #'
 #' @export
 
