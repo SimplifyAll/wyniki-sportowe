@@ -14,7 +14,7 @@
 #' \dontrun{
 #' get_games_story()}
 #'
-#' @author XXXXXXXXX
+#' @author Szymon Bazyluk, Aliaksandr Panimash
 #'
 #' @export
 
