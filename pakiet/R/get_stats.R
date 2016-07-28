@@ -14,7 +14,7 @@
 #' \dontrun{
 #' get_stats()}
 #'
-#' @author XXXXXXXXX
+#' @author Szymon Bazyluk, Aliaksandr Panimash
 #'
 #' @export
 
