@@ -7,7 +7,7 @@ Authors@R: c(
    person("Dawid", "Stelmach", email = "", role = "aut"),
    person("Kacper", "Roszczyna", email = "", role = "aut"),
    person("Szymon", "Bazyluk", email = "", role = "aut"),
-   person("Ania", "Elsner", email = "", role = "aut"),
+   person("Ania", "Elsner", email = "elsnerania@gmail.com", role = "aut"),
    person("Piotr", "Smuda", email = "piotrsmuda@gmail.com", role = "aut"))
 Maintainer: Aliaksandr Panimash <alex.panimash@gmail.com>
 Description: Set of functions that scrap data about NBA from webpages: basketball-reference.com,
