@@ -16,7 +16,7 @@
 #'
 #' @export
 #' 
-create_bets <-function(connection){
+create_odds <-function(connection){
   sql_command <- "CREATE TABLE odds (
   team_1_id           varchar(4) NOT NULL,
   team_2_id           varchar(4) NOT NULL,
