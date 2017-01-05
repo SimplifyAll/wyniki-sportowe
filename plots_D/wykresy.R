@@ -11,21 +11,21 @@ year = 2014
 #
 #przygotowanie tabeli
 threeVStwo <- function(year) {
-  x1 <- plyr::rename(team_stats, c("X2P"="twoP", "X3P"="threeP"))
-  x1 <- x1 %>%
-    full_join(team_names, by = c("Team" = "shortage")) %>%
-    filter(Year == year) %>%
-    select(Team, twoP, threeP, Possition, Conference) %>%
+  x1 <- teams_seasons_statistics %>%
+    full_join(teams_names, by = c("team_id" = "id")) %>%
+    filter(season == year) %>%
+    select(team_id, total_2ps, total_3ps, Possition, Conference) %>%
+    mutate(total_2ps = total_2ps - total_3ps) %>%
     arrange(desc(Conference), Possition)
   
-  tmp.tab <- as.character(x1$Team)
-  x1<-melt(x1,id.vars=c("Team", "Possition", "Conference")) %>%
+  teams_levels <- as.character(x1$team_id)
+  x1<-melt(x1,id.vars=c("team_id", "Possition", "Conference")) %>%
     arrange(desc(variable))
   
-  x1$Team <- factor(x1$Team, levels = tmp.tab, ordered = TRUE)
+  x1$team_id <- factor(x1$team_id, levels = teams_levels, ordered = TRUE)
   
   #tworzenie wykresóW
-  ggplot(x1, aes(x=Team, y=as.numeric(as.character(value)), fill=variable, alpha=Conference)) +
+  ggplot(x1, aes(x=team_id, y=as.numeric(as.character(value)), fill=variable, alpha=Conference)) +
     geom_bar(stat="identity", colour="black") + 
     scale_alpha_manual(values=c(0.4, 1)) +
     ggtitle(paste0('3P and 2P in ',year,' season')) +
@@ -71,7 +71,7 @@ pointsMap <- function(year) {
   usa_center = as.numeric(geocode("United States"))
   USAMap = ggmap(get_googlemap(center = usa_center, scale = 2, zoom = 4), extent = "normal")
   
-  coordinates <- team_names %>%
+  coordinates <- teams_names %>%
     select(City, lon, lat)
   
   games_agr <- games_story %>%
