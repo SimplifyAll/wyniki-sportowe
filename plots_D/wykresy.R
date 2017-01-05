@@ -30,7 +30,8 @@ threeVStwo <- function(year) {
     scale_alpha_manual(values=c(0.4, 1)) +
     ggtitle(paste0('3P and 2P in ',year,' season')) +
     xlab('Teams') + ylab('Points') +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    coord_flip()
 }
 
 
@@ -41,26 +42,26 @@ threeVStwo <- function(year) {
 
 avgPointsMonth <- function(year) {
   x2.host <- games_story %>%
-    filter(Year == year) %>%
-    group_by(Host, Month) %>%  
-    summarise(Mean_Points = mean(as.numeric(Tm))) %>%
+    filter(season == year) %>%
+    group_by(team_1_id, Month) %>%  
+    summarise(Mean_Points = mean(as.numeric(team_1_score))) %>%
     mutate(freq=n()) %>%
-    rename(Team = Host)
+    rename(Team = team_1_id)
   
   x2.opp <- games_story %>%
-    filter(Year == year) %>%
-    group_by(Opponent, Month) %>%  
-    summarise(Mean_Points = mean(as.numeric(Opp))) %>%
+    filter(season == year) %>%
+    group_by(team_2_id, Month) %>%  
+    summarise(Mean_Points = mean(as.numeric(team_2_score))) %>%
     mutate(freq=n()) %>%
-    rename(Team = Opponent)
+    rename(Team = team_2_id)
   
   x2 <- rbind(x2.host, x2.opp) %>%
     group_by(Team, Month) %>%
     summarise(Points = weighted.mean(Mean_Points, freq))
   
-  g1 <- ggplot(x2) +
-    geom_line(aes(x = Month, y = Points, group = Team, colour = Team)) +
-    geom_point(aes(x = Month, y = Points, group = Team, colour = Team))
+  g1 <- ggplot(x2, aes(factor(Month) , Points)) +
+    geom_boxplot() +
+    xlab('Months') + ylab('Mean Points')
   g1
 }
 
@@ -75,7 +76,7 @@ pointsMap <- function(year) {
     select(City, lon, lat)
   
   games_agr <- games_story %>%
-    filter(Year == year) %>%
+    filter(season == year) %>%
     group_by(City) %>%
     mutate(Points = as.numeric(Tm) + as.numeric(Opp), Game_Number = n()) %>%
     group_by(City, Game_Number) %>%
