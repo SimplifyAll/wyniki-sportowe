@@ -5,7 +5,7 @@ library(ggplot2)
 library(stringi)
 library(OpenStreetMap)
 library(plotly)
-#library(ggmap)
+library(ggmap)
 
 year = 2014
 #wykres 1
@@ -18,22 +18,26 @@ threeVStwo <- function(year) {
     filter(season == year) %>%
     select(team_id, total_2ps, total_3ps, Possition, Conference) %>%
     mutate(total_2ps = total_2ps - total_3ps) %>%
-    arrange(desc(Conference), Possition)
+    arrange(desc(Conference), Possition) %>%
+    rename(`Total Score` = total_2ps, `3 Points Shots Score` = total_3ps, Team = team_id)
   
-  teams_levels <- as.character(x1$team_id)
-  x1<-melt(x1,id.vars=c("team_id", "Possition", "Conference")) %>%
-    arrange(desc(variable))
+  teams_levels <- as.character(x1$Team)
+  x1<-melt(x1,id.vars=c("Team", "Possition", "Conference")) %>%
+    arrange(desc(variable)) %>%
+    mutate(value = as.numeric(as.character(value))) %>%
+    rename(Points = value, `Points Type` = variable)
   
-  x1$team_id <- factor(x1$team_id, levels = teams_levels, ordered = TRUE)
+  x1$Team <- factor(x1$Team, levels = teams_levels, ordered = TRUE)
   
   #tworzenie wykresóW
-  plot <- ggplot(x1, aes(x=team_id, y=as.numeric(as.character(value)), fill=variable, alpha=Conference)) +
+  plot <- ggplot(x1, aes(x=Team, y=Points, fill=`Points Type`, alpha=Conference)) +
     geom_bar(stat="identity", colour="black") + 
     scale_alpha_manual(values=c(0.4, 1)) +
     ggtitle(paste0('3P and 2P in ',year,' season')) +
     xlab('Teams') + ylab('Points') +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    coord_flip()
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) #+
+   # coord_flip()
+  #plot
   ggplotly(plot)
 }
 
@@ -90,8 +94,7 @@ plot(map)
     group_by(City, Game_Number) %>%
     summarise(Points = sum(Points)) %>%
     full_join(coordinates) %>%
-    mutate(freq = n(), avgPoints = Points/Game_Number) %>%
-    select(City, avgPoints, lon, lat)
+    mutate(freq = n(), avgPoints = Points/Game_Number)
   
   #prepare map layout
   g <- list(
@@ -112,9 +115,10 @@ plot(map)
       text = ~paste(games_agr$City, "<br />", games_agr$avgPoints, " mean points per game")
     ) %>%
     layout(title = paste('Mean points per game<br>Season', year, '<br>(Click legend to toggle)', sep = " "), geo = g)
-  p
-  #USAMap +
-   # geom_point(data = games_agr, aes(x=lon, y=lat, colour = avgPoints, size = Game_Number), alpha = 0.6) +
-    #scale_color_gradient(low = 'green', high = 'red')
+  #p
+  USAMap <- USAMap +
+    geom_point(data = games_agr, aes(x=lon, y=lat, colour = avgPoints, size = Game_Number), alpha = 0.6) +
+    scale_color_gradient(low = 'green', high = 'red')
+  ggplotly(USAMap)
 #}
 
