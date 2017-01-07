@@ -47,9 +47,9 @@ for (i in 1:nrow(teams_names)) {
   teams_names$lon[i] <- tmp[1]
   teams_names$lat[i] <- tmp[2]
 }
-teams_names$City[14] <- "Los Angeles 2"
-teams_names$lon[14] <- teams_names$lon[14] + 0.05
-teams_names$lat[14] <- teams_names$lat[14] + 0.05
+#teams_names$City[14] <- "Los Angeles 2"
+#teams_names$lon[14] <- teams_names$lon[14] + 0.05
+#teams_names$lat[14] <- teams_names$lat[14] + 0.05
 
 #dopisanie miejsca w konferencji w sezonie zasadniczy
 teams_seasons_statistics$Possition<-c(5,6,8,8,4,5,
@@ -91,12 +91,3 @@ for (i in 1:length(split)) {
 }
 games_story$Month <- month.abb[as.integer(games_story$Month)]
 games_story$Month <- factor(games_story$Month, levels = c("Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr"), ordered = TRUE)
-
-
-
-
-#dodanie miasta w którym rozgrywał się mecz
-x <- teams_names %>%
-  select(id, City, lon, lat)
-games_story <- merge(games_story, x, by.x = 'team_1_id', by.y = "id", all = TRUE)
-
