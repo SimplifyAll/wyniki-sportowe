@@ -8,13 +8,13 @@ coordinates <- teams_names %>%
   unique()
 
 #prepare data
-games_agr <- merge(games_story, coordinates, by.x = 'team_1_id', by.y = "id", all = TRUE)  %>%
+games_agr <- merge(games_story, coordinates, by.x = 'team_1_id', by.y = "id") %>%
   filter(season == year) %>%
   group_by(City) %>%
   mutate(Points = as.numeric(team_1_score) + as.numeric(team_2_score), Game_Number = n()) %>%
   group_by(City, Game_Number, lon, lat) %>%
   summarise(Points = sum(Points)) %>%
-  mutate(freq = n(), avgPoints = Points/Game_Number)
+  mutate(freq = n(), avgPoints = round(Points/Game_Number))
 
 #prepare map layout
 g <- list(
@@ -28,13 +28,25 @@ g <- list(
   countrycolor = toRGB("white")
 )
 
+f <- list(size = 18)
+
+m <- list(
+  l = 100,
+  r = 100,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+
 #prepare plot
 p <- plot_geo(games_agr, locationmode = 'USA-states', sizes = c(1, 250)) %>%
   add_markers(
-    x = ~lon, y = ~lat, size = ~avgPoints, color = ~Game_Number, hoverinfo = "text",
-    text = ~paste(games_agr$City, "<br />", games_agr$avgPoints, " mean points per game")
-  ) %>%
-  layout(title = paste('Mean points per game<br>Season', year, '<br>(Click legend to toggle)', sep = " "), geo = g)
+    x = ~lon, y = ~lat, size = ~avgPoints, color = ~avgPoints, hoverinfo = "text",
+    text = ~paste(games_agr$City, "<br />", games_agr$avgPoints, " mean points per game")) %>%
+  layout(title = paste('Mean points per game<br>Season', year, '<br>(Click legend to toggle)', sep = " "),
+         geo = g,
+         font = f,
+         margin = m)
 p
 
 

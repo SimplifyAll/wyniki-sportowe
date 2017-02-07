@@ -8,6 +8,7 @@ library(plotly)
 #wykres wstÄ™gowy pokazujÄ…cy Ĺ›redniÄ… liczbÄ™ zdobytych punktĂłw w danym miesiÄ…cu przez druĹĽyny w zadanych sezonach
 #
 #
+year = 2012
 x2.host <- games_story %>%
   filter(season == year) %>%
   group_by(team_1_id, Month) %>%  
@@ -24,10 +25,46 @@ x2.opp <- games_story %>%
 
 x2 <- rbind(x2.host, x2.opp) %>%
   group_by(Team, Month) %>%
-  summarise(Points = weighted.mean(Mean_Points, freq))
+  summarise(Points = round(weighted.mean(Mean_Points, freq)))
 
-g1 <- ggplot(x2, aes(factor(Month) , Points)) +
-  geom_boxplot() +
-  xlab('Months') + ylab('Mean Points per Game') +
-  ggtitle(paste('Comparison of mean points per game in season',year, sep = " "))
-ggplotly(g1)
+
+f <- list(size = 20)
+
+m <- list(
+  l = 100,
+  r = 100,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+
+y <- list(
+  title = 'Month',
+  titlefont = f
+)
+
+x <- list(
+  title = 'Mean Points per Game',
+  titlefont = f
+)
+
+p <- plot_ly(x2, y = ~Month, x = ~Points, type = "box", orientation = 'h') %>%
+  layout(title = paste0('Mean points per game in season ',year,'<br>Month comparison'),
+         font = f,
+         xaxis = x,
+         yaxis = y,
+         margin = m)
+p
+
+
+
+
+
+
+
+# g1 <- ggplot(x2, aes(factor(Month) , Points)) +
+#   geom_boxplot() +
+#   xlab('Months') + ylab('Mean Points per Game') +
+#   ggtitle(paste('Mean points per game in season',year, sep = " "))
+# 
+# ggplotly(g1)

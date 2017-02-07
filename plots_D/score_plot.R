@@ -21,18 +21,47 @@ season_score_W <- season_score %>%
 season_score_E <- season_score %>%
   filter(Conference == 'E')
 
-pW <- plot_ly(season_score_W, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3 Points Shots Score, W') %>%
-  add_trace(y = ~total_2ps , name = '2 Points Shots Score, E') %>%
-  layout(barmode = 'stack')
 
-pE <- plot_ly(season_score_E, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3 Points Shots Score, E') %>%
-  add_trace(y = ~total_2ps , name = '2 Points Shots Score, E') %>%
-  layout(barmode = 'stack')
 
-subplot(pW, pE) %>%
-  layout(title = paste0('3P and 2P in ',year,' season'),
-         xaxis = list(title = 'Teams'),
-         yaxis = list(title = 'Points'))
+
+
+f <- list(size = 18)
+
+m <- list(
+  l = 100,
+  r = 100,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+
+y <- list(
+  title = 'Points',
+  titlefont = f
+)
+
+x <- list(
+  #title = 'Months',
+  tickangle = 60,
+  titlefont = f
+)
+
+pW <- plot_ly(season_score_W, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3pts, W', marker=list(color='#7b3294')) %>%
+  add_trace(y = ~total_2ps , name = '2pts, W', marker=list(color="#c2a5cf")) %>%
+  layout(barmode = 'stack',
+         xaxis = x)
+
+pE <- plot_ly(season_score_E, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3pts, E', marker=list(color='#008837')) %>%
+  add_trace(y = ~total_2ps , name = '2pts, E', marker=list(color='#a6dba0')) %>%
+  layout(barmode = 'stack',
+         xaxis = x)
+
+subplot(pW, pE, shareY = TRUE) %>%
+  layout(title = paste0('3P and 2P in ',year,' season<br>Cummulative plot'),
+         #xaxis = list(title = 'Teams'),
+         font = f,
+         yaxis = y,
+         margin = m)
 
 #---------------------------
 #plotly war
@@ -94,18 +123,3 @@ subplot(pW, pE) %>%
   #   coord_flip()
   # #plot
   # ggplotly(plot)
-  # 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
