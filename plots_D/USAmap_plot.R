@@ -42,7 +42,7 @@ m <- list(
 p <- plot_geo(games_agr, locationmode = 'USA-states', sizes = c(1, 250)) %>%
   add_markers(
     x = ~lon, y = ~lat, size = ~avgPoints, color = ~avgPoints, hoverinfo = "text",
-    text = ~paste(" City: ", games_agr$City, "<br />", "Mean points per game", games_agr$avgPoints, "<br />", "Number of games", games_agr$Game_Number)) %>%
+    text = ~paste(" City: ", games_agr$City, "<br />", "Mean points per game: ", games_agr$avgPoints, "<br />", "Number of games: ", games_agr$Game_Number)) %>%
   layout(title = paste('Mean points per game<br>Season', year, sep = " "),
          geo = g,
          font = f,

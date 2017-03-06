@@ -42,17 +42,17 @@ y <- list(
 
 x <- list(
   #title = 'Months',
-  tickangle = 60,
+  tickangle = -60,
   titlefont = f
 )
 
-pW <- plot_ly(season_score_W, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3pts, W', marker=list(color='#7b3294')) %>%
-  add_trace(y = ~total_2ps , name = '2pts, W', marker=list(color="#c2a5cf")) %>%
+pW <- plot_ly(season_score_W, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3pts, W', marker=list(color='#225ea8')) %>%
+  add_trace(y = ~total_2ps , name = '2pts, W', marker=list(color="#41b6c4")) %>%
   layout(barmode = 'stack',
          xaxis = x)
 
-pE <- plot_ly(season_score_E, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3pts, E', marker=list(color='#008837')) %>%
-  add_trace(y = ~total_2ps , name = '2pts, E', marker=list(color='#a6dba0')) %>%
+pE <- plot_ly(season_score_E, x = ~team_id, y = ~total_3ps, type = 'bar', name = '3pts, E', marker=list(color='#cb181d')) %>%
+  add_trace(y = ~total_2ps , name = '2pts, E', marker=list(color='#fb6a4a')) %>%
   layout(barmode = 'stack',
          xaxis = x)
 
@@ -63,9 +63,17 @@ subplot(pW, pE, shareY = TRUE) %>%
          yaxis = y,
          margin = m)
 
+
+# colors
+#007399
+#7b3294
+#451D84
+#7b3294
+
 #---------------------------
 #plotly war
 #---------------------------
+
 
 # p <- plot_ly(season_score, y = ~team_id, x = ~total_3ps, type = 'bar', name = '3 Points Shots Score', orientation = 'h',
 #              marker = list(color = 
